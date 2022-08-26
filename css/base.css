@@ -1,0 +1,142 @@
+:root {
+    --main-color: black;
+    --font-color: white;
+    --font-disabled: #b3b3b3;
+    --mg-bt: 20px;
+    --custom-color: rgba(0, 0, 0, .7);
+    --min-height: 80px;
+    --min-width: 80px;
+    --btn-color: #1ed760;
+}
+
+.link {
+    font-weight: 600;
+    text-decoration: none;
+}
+
+
+hr {
+    height: 0.5px;
+    color: white;
+}
+
+.favorite {
+    color: pink;
+}
+
+.bookmark {
+    color: greenyellow;
+}
+
+.disabled {
+    color: var(--font-disabled);
+}
+
+.button {
+    margin: 10px;
+    border: 1.5px solid white;
+    border-radius: 15px;
+    text-align: center;
+}
+
+
+.center {
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.direction {
+    justify-content: space-between;
+}
+
+.flex-block {
+    justify-content: space-between;
+    display: flex;
+    padding: 30px 0;
+    align-items: center;
+}
+
+.align {
+    display: flex;
+    align-items: center;
+}
+
+.btn {
+    color: var(--font-color);
+}
+
+.change-status {
+    color: green;
+}
+
+.active {
+    color: white;
+}
+
+.show {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+.navbar-nav {
+    gap: 50px;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: transparent;
+}
+
+button:hover {
+    background-color: #b3b3b3;
+}
+
+.play-btn {
+    position: absolute;
+}
+
+.play-icon {
+    box-shadow: 0 8px 8px rgb(0 0 0 / 30%);
+    color: var(--font-color);
+    padding: 10px;
+    background-color: var(--btn-color);
+    border-radius: 50%;
+}
+
+.play-btn-main {
+    bottom: 90px;
+    left: 80px;
+}
+
+div#banner-fav {
+    height: 1000px;
+    margin-top: 60px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.fav-theme {
+    background-color: rgb(80, 56, 160) !important;
+    filter: brightness(100%);
+}
+
+/* Scroll Bar */
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background-color: var(--custom-color);
+}
