@@ -509,6 +509,10 @@ h3.fav-status.fav-status-sm.title {
 
 /* Banner */
 
+.head-banner {
+    padding: 30px 0;
+}
+
 .head-banner-info {
     display: flex;
     gap: 25px;
@@ -576,20 +580,17 @@ h3.fav-status.fav-status-sm.title {
     margin: 50px 0;
 }
 
-a.body-banner-link {
-    font-weight: 700;
-    color: var(--main-color);
-    font-size: 1rem;
-    text-decoration: none;
-    padding: 15px;
-    background-color: white;
-    width: fit-content;
-    border-radius: 35px;
+.btn-large:hover,
+.btn-small:hover {
+    transform: scale(1.1);
 }
 
-a.body-banner-link:hover,
-li.nav-item.button.center:hover {
-    transform: scale(1.1);
+.btn-large:hover {
+    color: var(--main-color);
+}
+
+.btn-small:hover {
+    color: var(--font-color);
 }
 
 .banner-music {

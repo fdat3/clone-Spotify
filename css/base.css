@@ -39,6 +39,30 @@ hr {
     text-align: center;
 }
 
+.btn-large {
+    font-weight: 700;
+    color: var(--main-color);
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 15px;
+    background-color: white;
+    width: fit-content;
+    border-radius: 35px;
+}
+
+.btn-small {
+    line-height: 0px;
+    height: 18px;
+    padding: 15px;
+    font-weight: 700;
+    color: var(--font-color);
+    border: 1px solid white;
+    font-size: .8rem;
+    text-decoration: none;
+    background-color: var(--main-color);
+    width: fit-content;
+    border-radius: 35px;
+}
 
 .center {
     flex-wrap: wrap;
@@ -85,6 +109,7 @@ hr {
 
 .navbar-nav {
     gap: 50px;
+    align-items: center;
 }
 
 button {
@@ -116,7 +141,6 @@ button:hover {
 }
 
 div#banner-fav {
-    height: 1000px;
     margin-top: 60px;
 }
 

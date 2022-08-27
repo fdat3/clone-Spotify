@@ -60,6 +60,12 @@ const app = {
             path: './assets/music/vaicaunoicokhiennguoithaydoi - GREY D tlinh (NhacPro.net).flac',
             image: './assets/img/Singers/greyD.jpg'
         },
+        {
+            name: 'Tháng mấy em nhớ anh ?',
+            singer: 'Hà Anh Tuấn',
+            path: './assets/music/ThangMayEmNhoAnh-HaAnhTuan-6995531.mp3',
+            image: './assets/img/Singers/HaAnhTuan.jpg'
+        }
     ],
 
     tracks: [

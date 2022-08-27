@@ -37,39 +37,20 @@ favIcon.onclick = function () {
 
 // Change Tab 
 
-tabs.onclick = function () {
-    changeLayout()
-}
 
-mainTabs.onclick = function () {
-    changeLayout()
-}
-
-
-libTabs.onclick = function () {
-    libLayout()
-}
-
-favTabs.onclick = function () {
-    favLayout()
-}
-
-// Change color theme
-
-mainLayout.onclick = function () {
-    favLayout();
-}
 
 navTheme.onclick = function () {
     favLayout();
 }
 // Handle
 
+
 function changeLayout() {
-    tabs.classList.remove("hidden")
     libsIcon.classList.remove('active')
+    favIcon.classList.remove('active')
     mainIcon.classList.remove('active')
     tabsIcon.classList.add("active")
+    tabs.classList.remove("hidden")
     mainTabs.classList.add("hidden")
     mainLayout.classList.remove('fav-theme')
     preventDefault()
@@ -78,12 +59,13 @@ function changeLayout() {
 // lib layout 
 
 function libLayout() {
-    mainTabs.classList.add("hidden")
     libsIcon.classList.add('active')
-    tabs.classList.add("hidden")
+    favIcon.classList.remove('active')
     mainIcon.classList.remove('active')
-    libTabs.classList.remove('hidden')
     tabsIcon.classList.remove("active")
+    mainTabs.classList.add("hidden")
+    tabs.classList.add("hidden")
+    libTabs.classList.remove('hidden')
     mainLayout.classList.remove('fav-theme')
     preventDefault()
 }
@@ -91,12 +73,14 @@ function libLayout() {
 // favorite layout 
 
 function favLayout() {
-    favTabs.classList.remove('hidden')
+    tabs.classList.add("hidden")
     favIcon.classList.add('active')
     mainIcon.classList.remove('active')
+    libsIcon.classList.remove('active')
+    tabsIcon.classList.remove('active')
+    favTabs.classList.remove('hidden')
     mainTabs.classList.add("hidden")
     libTabs.classList.add('hidden')
-    tabs.classList.add("hidden")
     mainLayout.classList.add('fav-theme')
     navTheme.classList.add('fav-theme')
     preventDefault()
