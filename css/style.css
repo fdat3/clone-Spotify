@@ -26,15 +26,18 @@ html {
   flex-direction: column;
 }
 
-.control .icon-pause {
+.control .icon-pause,
+.btn-toggle-scroll-play .icon-pause {
   display: none;
 }
 
-.control.playing .icon-pause {
+.control.playing .icon-pause,
+.btn-toggle-scroll-play.playing .icon-pause {
   display: inline-block;
 }
 
-.control.playing .icon-play {
+.control.playing .icon-play,
+.btn-toggle-scroll-play.playing .icon-play {
   display: none;
 }
 
@@ -117,9 +120,10 @@ header h2 {
   color: var(--btn-color);
 }
 
-.control .btn-toggle-play {
-  width: 30px;
-  height: 30px;
+.control .btn-toggle-play,
+.play-btn-scroll .btn-toggle-scroll-play {
+  width: 41px;
+  height: 41px;
   border-radius: 50%;
   font-size: 17px;
   color: #fff;
@@ -154,6 +158,7 @@ header h2 {
   height: 1000px;
   background-color: var(--main-color);
   padding: 12px;
+  float: right;
 }
 
 .song {
@@ -193,7 +198,6 @@ header h2 {
 .song .thumb {
   width: 44px;
   height: 44px;
-  border-radius: 50%;
   background-size: cover;
   margin: 0 8px;
 }
@@ -226,9 +230,6 @@ header h2 {
   padding-right: 16px;
 }
 
-/* div#main__page,
-div#search__page,
-div#lib__page,
-div#fav__page {
-  display: none;
-} */
+p.author {
+  margin: 0;
+}

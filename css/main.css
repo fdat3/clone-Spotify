@@ -5,9 +5,12 @@ body {
 nav.navbar.navbar-expand-lg.bg-light {
     z-index: 5;
     position: fixed;
-    left: 0;
     right: 0;
     top: 0;
+}
+
+.search-bg {
+    left: 0;
 }
 
 .content {
@@ -317,6 +320,10 @@ a.navbar-brand {
     box-shadow: 0 8px 24px rgb(0 0 0 / 50%);
 }
 
+.your__singer-img {
+    border-radius: 50%;
+}
+
 .card-body {
     min-height: 100px;
     padding: 15px 0 0 0;
@@ -347,6 +354,7 @@ a.navbar-brand {
 }
 
 .your__playlist-card:hover {
+    transition: all .3s ease;
     background-color: hsla(0, 0%, 100%, .2);
     cursor: pointer;
 }
@@ -510,13 +518,23 @@ h3.fav-status.fav-status-sm.title {
 /* Banner */
 
 .head-banner {
-    padding: 30px 0;
+    padding: 30px;
+}
+
+.head-banner-music {
+    padding: 30px 0 0 0;
 }
 
 .head-banner-info {
     display: flex;
     gap: 25px;
     align-items: center;
+}
+
+.head-banner-content-music {
+    background-color: rgb(8, 144, 208);
+    float: right;
+    padding: 30px;
 }
 
 .head-banner-img {
@@ -535,6 +553,7 @@ h3.fav-status.fav-status-sm.title {
     color: var(--font-color);
     font-weight: 900;
 }
+
 
 .header-banner-profile-img {
     width: 24px;
@@ -596,7 +615,15 @@ h3.fav-status.fav-status-sm.title {
 .banner-music {
     width: 100%;
     gap: 50px;
-    display: none;
     flex-direction: column;
     align-items: center;
+}
+
+.option-banner {
+    display: flex;
+    align-items: center;
+}
+
+button:hover {
+    background-color: transparent !important;
 }

@@ -8,6 +8,7 @@ const description = $('header h4')
 const cdThumb = $('.cd-thumb')
 const audio = $('#audio')
 const playBtn = $('.btn-toggle-play')
+const playIcon = $('.play-btn-scroll')
 const progress = $('#progress')
 const nextBtn = $('.btn-next')
 const prevBtn = $('.btn-prev')
@@ -15,6 +16,7 @@ const randomBtn = $('.btn-random')
 const repeatBtn = $('.btn-repeat')
 const playlist = $('.playlist')
 const control = $('.control')
+const playScroll = $('.btn-toggle-scroll-play')
 const song = $('.song')
 const track = $('.track')
 const topic = $('.row')
@@ -23,6 +25,11 @@ const podcast = $('.podcast')
 const recommend = $('.recommend')
 const allSearch = $('.all-content')
 const yourPlaylist = $('.fav-list-xs')
+const relax = $('.relax')
+const favoriteSong = $('.favorite-song')
+const spotify = $('.spotify-choice')
+const trending = $('.trending')
+const singer = $('.singer')
 
 const app = {
     currentIndex: 0, // lay bai hat dau tien
@@ -30,17 +37,18 @@ const app = {
     isRandom: false,
     isRepeat: false,
     songs: [ // mang chua cac bai hat
-        {
-            name: 'Vẫn nhớ',
-            singer: 'Soobin Hoàng Sơn',
-            path: './assets/music/VanNhoCover1-SoobinHoangSon-6269391.mp3',
-            image: './assets/img/Singers/soobin.jpg'
-        },
+
         {
             name: 'Lặng Thầm',
             singer: 'Noo Phước Thịnh',
             path: './assets/music/LangTham-NooPhuocThinh_35d63.mp3',
             image: './assets/img/Singers/Noo.jpg'
+        },
+        {
+            name: 'Vẫn nhớ',
+            singer: 'Soobin Hoàng Sơn',
+            path: './assets/music/VanNhoCover1-SoobinHoangSon-6269391.mp3',
+            image: './assets/img/Singers/soobin.jpg'
         },
         {
             name: 'Một chút quên anh thôi',
@@ -511,11 +519,244 @@ const app = {
         }
     ],
 
+    relaxLists: [
+        {
+            title: 'Thoải Mái Gác Chân Lên',
+            description: 'Nằm nhà, thoải mái gác chân lên nghỉ ngơi...',
+            image: './assets/img/Playlists/Relax Topic/ab67706f00000002296a902bf19a1cf9087f67b5.jpg'
+        },
+        {
+            title: 'Chill Hits',
+            description: 'Kick back to the best new and recent chill hits.',
+            image: './assets/img/Playlists/Relax Topic/ab67706f0000000219190d58aeb83b1f34fedeb0.jpg'
+        },
+        {
+            title: 'Soft Pop Hits',
+            description: 'Listen to easy songs from your favorite artists! Cover: Lady Gaga',
+            image: './assets/img/Playlists/Relax Topic/ab67706f00000002c4e0a29097d2f0f52baf8b68.jpg'
+        },
+        {
+            title: 'Acoustic Favorites',
+            description: 'Lose yourself to over 5 hours of acoustic goodness.',
+            image: './assets/img/Playlists/Relax Topic/ab67706f0000000223b510f4800f649a51709ac7.jpg'
+        },
+        {
+            title: 'Coffee and Piano',
+            description: 'Soft (the quietest of them all), subtle, no words needed. Take a sip and enjoy the music of composers from around the world.',
+            image: './assets/img/Playlists/Relax Topic/ab67706f00000002dfd8b99086f2c703cc76a1f1.jpg'
+        },
+        {
+            title: 'Dalkom Cafe',
+            description: 'Chill Korean tunes that\'\s perfect with your latte or americano. (카페와 어울리는 편안한 음악들을 감상하세요.)',
+            image: './assets/img/Playlists/Relax Topic/ab67706f0000000262a9874085e91a05440a1cee.jpg'
+        }
+
+    ],
+
+    favLists: [
+        {
+            title: 'Buổi Diễn',
+            description: 'Những phần trình diễn sống động và chân thực trên sân khấu. Ảnh bìa: Hoàng Dũng, Orange, Suni Hạ Linh, GREY D',
+            image: './assets/img/Playlists/FavoriteSong/ab67706f00000002a12ab12a6964435d3f18bd33.jpg'
+        },
+        {
+            title: 'Tiếng Hát Át Tiếng Ka',
+            description: 'Hãy để tiếng hát của bạn át tiếng karaoke nhà hàng xóm',
+            image: './assets/img/Playlists/FavoriteSong/ab67706f0000000288c7ffef42792225574daccb.jpg'
+        },
+        {
+            title: 'Song Ca V-Pop',
+            description: 'Hai cây chụm lại nên hòn núi cao. Ảnh bìa: Miu Lê, Karik',
+            image: './assets/img/Playlists/FavoriteSong/ab67706f000000029a6c3f1f43baa2059346f234.jpg'
+        },
+        {
+            title: 'V-Pop Không Thể Thiếu',
+            description: 'V-Pop đã đơm hoa trên những khúc ca này. Ảnh bìa: Phương Ly',
+            image: './assets/img/Playlists/FavoriteSong/ab67706f00000002e62c54dd6ab2db86738f954d.jpg'
+        },
+        {
+            title: 'Anh Hào Nhạc Việt',
+            description: 'Những nghệ sĩ nam góp phần rạng rỡ cho V-Pop. Ảnh bìa: MONO',
+            image: './assets/img/Playlists/FavoriteSong/ab67706f000000023aa81d8c2a6a7e5cd53580bf.jpg'
+        },
+        {
+            title: 'Hip-hop Việt',
+            description: 'Dòng chảy của rap Việt luôn cuồn cuộn với các tên tuổi Đen, Binz, Da LAB, RPT MCK, HIEUTHUHAI, 16 Typh...',
+            image: './assets/img/Playlists/FavoriteSong/ab67706f000000025ebffc9ce5e8074148ff4628.jpg'
+        }
+    ],
+
+    spotifyLists: [
+        {
+            title: 'Hot Hits Vietnam',
+            description: 'Đông tới Tây, đây là những ca khúc thịnh hành nhất ở Việt Nam. Ảnh bìa: BLACKPINK',
+            image: './assets/img/Playlists/SpotifyChoice/ab67706f000000021e40739c5d6a8712984b7621.jpg'
+        },
+        {
+            title: 'EQUAL Vietnam',
+            description: 'Cùng tôn vinh tài năng và âm nhạc của những nữ nghệ sĩ Việt. Ảnh bìa: Bảo Anh',
+            image: './assets/img/Playlists/SpotifyChoice/ab67706f0000000230949dd0cc6b7b1c262f0260.jpg'
+        },
+        {
+            title: 'V-Pop Không Thể Thiếu',
+            description: 'V-Pop đã đơm hoa trên những khúc ca này. Ảnh bìa: Phương Ly',
+            image: './assets/img/Playlists/SpotifyChoice/ab67706f00000002e62c54dd6ab2db86738f954d.jpg'
+        },
+        {
+            title: 'Pop Rising Vietnam',
+            description: 'Những ca khúc sẽ thành hit trong nay mai. Ảnh bìa: Hoàng Dũng',
+            image: './assets/img/Playlists/SpotifyChoice/ab67706f00000002f474ae7eb3f1d242f2f3f5b2.jpg'
+        },
+        {
+            title: 'Thiên Hạ Nghe Gì',
+            description: 'Những gì mà người bên cạnh bạn đang nghe. Ảnh bìa: Vũ.',
+            image: './assets/img/Playlists/SpotifyChoice/ab67706f00000002ce2454b3658a8e68949575ac.jpg'
+        },
+        {
+            title: 'Fresh Finds Vietnam',
+            description: 'Khám phá 🎶 đáng nghe từ những 🎼 có thể bạn chưa biết. Ảnh bìa: Phạm Nguyên Ngọc; thiết kế: Isu Kim',
+            image: './assets/img/Playlists/SpotifyChoice/ab67706f000000026414a44e5cc69a1f691944d7.jpg'
+        }
+    ],
+
+    trendingLists: [
+        {
+            title: 'đứa nào làm em buồn?',
+            artist: 'Phuc Du, Hoàng Dũng',
+            image: './assets/img/Tracks/ab67616d00001e02bd14e958d6f3eabbcad5476b.jpg'
+        },
+        {
+            title: 'Vì Anh Đâu Có Biết',
+            artist: 'Madihu, Vũ.',
+            image: './assets/img/Tracks/ab67616d00001e022461003df8139247949c8a9d.jpg'
+        },
+        {
+            title: 'Tình Yêu Ngủ Quên',
+            artist: 'Hoàng Tôn',
+            image: './assets/img/Tracks/ab67616d00001e029137c858c1ca7a07e80c0fb4.jpg'
+        },
+        {
+            title: '22',
+            artist: 'MONO',
+            image: './assets/img/Tracks/ab67616d00001e02f909731198469e69f5809083.jpg'
+        },
+        {
+            title: 'Mặt Mộc',
+            artist: 'Phạm Nguyên Ngọc, VAnh, Ân Nhi',
+            image: './assets/img/Tracks/ab67616d00001e02d39b6f25e69de76a491e9594.jpg'
+        },
+        {
+            title: 'Em Ơi',
+            artist: 'Vũ Cát Tường',
+            image: './assets/img/Tracks/ab67616d00001e0244e4ce9b9dd22a5c3d7803b6.jpg'
+        }
+    ],
+
+    singerLists: [
+        {
+            name: 'Hà Anh Tuấn',
+            description: 'Nghệ sĩ',
+            image: './assets/img/Singers/ab6761610000f17899649a8a989bcacb12960591.jpg'
+        },
+        {
+            name: 'Miu Lê',
+            description: 'Nghệ sĩ',
+            image: './assets/img/Singers/ab6761610000f17807a297790e67ba9d5d34508e.jpg'
+        },
+        {
+            name: 'Đức Phúc',
+            description: 'Nghệ sĩ',
+            image: './assets/img/Singers/ab6761610000f17817b1620d6e1312038870ea7d.jpg'
+        },
+        {
+            name: 'Đông Nhi',
+            description: 'Nghệ sĩ',
+            image: './assets/img/Singers/ab6761610000f1789a466e1eec9a42668786c80f.jpg'
+        },
+        {
+            name: 'Mr.Siro',
+            description: 'Nghệ sĩ',
+            image: './assets/img/Singers/ab67616d0000b2735a73c4f1a81c9bfd8df8a243.jpg'
+        },
+        {
+            name: 'Thùy Chi',
+            description: 'Nghệ sĩ',
+            image: './assets/img/Singers/ab6761610000f1780e7785316847995f2313089b.jpg'
+        }
+    ],
+
+    convertStringToHtml: (str) => {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(str, 'text/html');
+        return doc.body;
+    },
+
+    isPlayingAudio: (element) => {
+        return !element.paused
+    },
+
+    handlePlayingAudio: function ({ name, singer, path, image }) {
+
+        /**
+         * TODO: audio tag
+         * - Check audio tag has contain src?
+         *      if not => replace src => play
+         *      if true => 
+         *              check src is equal to current src
+         *                  if true => pause/play
+         *                  false => replace new src => play
+         */
+
+        console.log('handlePlayingAudio')
+
+        const state = audio.paused // boolean
+
+        const src = audio.getAttribute('src')
+
+        if (state) {
+            // check src has content path
+
+
+            if (!src) {
+                //  replace path to src
+                audio.setAttribute('src', path)
+                audio.play()
+            } else {
+                if (src === path) {
+                    audio.pause()
+                } else {
+                    audio.setAttribute('src', path)
+                    audio.play()
+                }
+            }
+
+        } else {
+
+            if (src !== path) {
+                audio.setAttribute('src', path)
+                audio.play()
+            } else {
+                audio.pause()
+            }
+        }
+
+    },
+
 
     render: function () { // hien thi cac bai hat
-        const htmls = this.songs.map(song => {
-            return `
-                <div class="song">
+        const htmls = this.songs.forEach(song => {
+
+            /**
+             * @params of song
+             * - name: string
+             * - singer: string
+             * - path: string
+             * - image: string
+             */
+
+            const songId = song.path.split('.')[1].replace(/\s/g, ''); //regex to remove spacing 
+            const html = `
+                <div id="${songId.split('/assets/music/')[1]}" class="song" data-dom="song-item" data-song="${song.path}">
                     <div class="thumb"
                     style="background-image: url('${song.image}') ;">
                     </div>
@@ -528,8 +769,21 @@ const app = {
                     </div>
                 </div> 
             `
+
+            const { children } = this.convertStringToHtml(html)
+
+            // const audioElement = children[0].getElementsByTagName('audio')[0]
+            // const state = audioElement.paused // boolean
+
+
+
+            children[0].addEventListener('click', function () {
+                app.handlePlayingAudio(song)
+            })
+
+            playlist.appendChild(children[0])
         })
-        playlist.innerHTML = htmls.join('');
+
 
         const tracklist = this.tracks.map(track => {
             return `
@@ -655,6 +909,106 @@ const app = {
             `
         })
         yourPlaylist.innerHTML = playlistItem.join('')
+
+        const relaxTopic = this.relaxLists.map(relaxList => {
+            return `
+            <div class="your__playlist-wrap col-lg-2">
+              <div class="card your__playlist-card">
+                <img class="your__playlist-img" src="${relaxList.image}" class="card-img-top" alt="">
+                <div class="play-btn play-btn-lg play-btn-main">
+                  <span class="material-symbols-outlined play-icon">
+                    play_arrow
+                  </span>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">${relaxList.title}</h5>
+                  <p class="card-text">${relaxList.description}</p>
+                </div>
+              </div>
+            </div>
+            `
+        })
+        relax.innerHTML = relaxTopic.join('')
+
+        const favoriteTopic = this.favLists.map(favList => {
+            return `
+            <div class="your__playlist-wrap col-lg-2">
+              <div class="card your__playlist-card">
+                <img class="your__playlist-img" src="${favList.image}" class="card-img-top" alt="">
+                <div class="play-btn play-btn-lg play-btn-main">
+                  <span class="material-symbols-outlined play-icon">
+                    play_arrow
+                  </span>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">${favList.title}</h5>
+                  <p class="card-text">${favList.description}</p>
+                </div>
+              </div>
+            </div>
+            `
+        })
+        favoriteSong.innerHTML = favoriteTopic.join('')
+
+        const spotifyChoice = this.spotifyLists.map(spotifyList => {
+            return `
+            <div class="your__playlist-wrap col-lg-2">
+              <div class="card your__playlist-card">
+                <img class="your__playlist-img" src="${spotifyList.image}" class="card-img-top" alt="">
+                <div class="play-btn play-btn-lg play-btn-main">
+                  <span class="material-symbols-outlined play-icon">
+                    play_arrow
+                  </span>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">${spotifyList.title}</h5>
+                  <p class="card-text">${spotifyList.description}</p>
+                </div>
+              </div>
+            </div>
+            `
+        })
+        spotify.innerHTML = spotifyChoice.join('')
+
+        const trendingChoice = this.trendingLists.map(trendingList => {
+            return `
+            <div class="your__playlist-wrap col-lg-2">
+              <div class="card your__playlist-card">
+                <img class="your__playlist-img" src="${trendingList.image}" class="card-img-top" alt="">
+                <div class="play-btn play-btn-lg play-btn-main">
+                  <span class="material-symbols-outlined play-icon">
+                    play_arrow
+                  </span>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">${trendingList.title}</h5>
+                  <p class="card-text">${trendingList.artist}</p>
+                </div>
+              </div>
+            </div>
+            `
+        })
+        trending.innerHTML = trendingChoice.join('')
+
+        const singerChoice = this.singerLists.map(singerList => {
+            return `
+            <div class="your__playlist-wrap col-lg-2">
+              <div class="card your__playlist-card">
+                <img class="your__playlist-img your__singer-img" src="${singerList.image}" class="card-img-top" alt="">
+                <div class="play-btn play-btn-lg play-btn-main">
+                  <span class="material-symbols-outlined play-icon">
+                    play_arrow
+                  </span>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">${singerList.name}</h5>
+                  <p class="card-text">${singerList.description}</p>
+                </div>
+              </div>
+            </div>
+            `
+        })
+        singer.innerHTML = singerChoice.join('')
     },
 
 
@@ -668,9 +1022,6 @@ const app = {
 
     handleEvents: function () { //xu li
         const _this = this //this global
-
-
-
 
         // document.onscroll = function () {
         //     const scrollTop = window.scrollY || document.documentElement.scrollTop
@@ -690,16 +1041,30 @@ const app = {
             }
         }
 
+        playIcon.onclick = function () {
+            if (_this.isPlaying) {
+                audio.pause()
+            } else {
+                audio.play()
+            }
+        }
+
+        song.onClick = function () {
+            song.classList.add('active')
+            audio.play();
+        }
+
         //When playing
         audio.onplay = function () {
             _this.isPlaying = true
             control.classList.add('playing')
-            song.classList.add('active')
+            playScroll.classList.add('playing')
         }
         //When pausing
         audio.onpause = function () {
             _this.isPlaying = false
             control.classList.remove('playing')
+            playScroll.classList.remove('playing')
         }
         //Song Tempo
         audio.ontempo = function (e) {
@@ -756,14 +1121,9 @@ const app = {
         }
 
         //Click Song
-        playlist.onclick = function (e) {
-            if (
-                e.target.closest('.song:not(.active') ||
-                !e.target.closest('.option')
-            ) {
-
-            }
-        }
+        // playlist.onclick = function (e) {
+        //     audio.play();
+        // }
 
         // Change Layout
     },

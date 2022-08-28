@@ -64,6 +64,21 @@ hr {
     border-radius: 35px;
 }
 
+.play-btn-scroll {
+    display: block;
+    padding: 0;
+    margin: 0px 30px 0 0;
+}
+
+.option {
+    font-size: 28px;
+    color: white;
+}
+
+.btn-option {
+    padding: 0;
+}
+
 .center {
     flex-wrap: wrap;
     display: flex;
@@ -103,6 +118,11 @@ hr {
     display: block;
 }
 
+.current-song {
+    background-color: hsla(0, 0%, 100%, .2);
+    border-radius: 5px;
+}
+
 .hidden {
     display: none;
 }
@@ -128,11 +148,18 @@ button:hover {
 }
 
 .play-icon {
+    display: block;
     box-shadow: 0 8px 8px rgb(0 0 0 / 30%);
     color: var(--font-color);
     padding: 10px;
     background-color: var(--btn-color);
     border-radius: 50%;
+}
+
+
+.play-icon:hover {
+    cursor: pointer;
+    transform: scale(1.1);
 }
 
 .play-btn-main {
@@ -153,6 +180,10 @@ div#banner-fav {
     filter: brightness(100%);
 }
 
+.banner-theme {
+    background-color: rgb(8, 144, 208) !important;
+}
+
 /* Scroll Bar */
 
 /* width */
@@ -163,4 +194,12 @@ div#banner-fav {
 /* Handle */
 ::-webkit-scrollbar-thumb {
     background-color: var(--custom-color);
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+.fix-width {
+    width: 100%;
 }

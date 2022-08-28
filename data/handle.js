@@ -14,33 +14,39 @@ mainIcon = document.getElementById("home__layout")
 mainTabs = document.getElementById("main__page")
 tabsIcon = document.getElementById("search__layout")
 libsIcon = document.getElementById("lib__layout")
-libTabs = document.getElementById('lib__page')
 favIcon = document.getElementById('fav-icon')
+bannerIcon = document.getElementById('banner__icon')
+libTabs = document.getElementById('lib__page')
 favTabs = document.getElementById('banner-fav')
 mainLayout = document.getElementById('main__layout')
+musicLayout = document.getElementById('banner__music')
 navTheme = document.getElementById('navbar')
+
 
 // Click Icon
 
-tabsIcon.onclick = function () {
-    changeLayout()
+tabsIcon.onclick = function (e) {
+    changeLayout(e)
 };
 
 
-libsIcon.onclick = function () {
-    libLayout()
+libsIcon.onclick = function (e) {
+    libLayout(e)
 }
 
-favIcon.onclick = function () {
-    favLayout()
+favIcon.onclick = function (e) {
+    favLayout(e)
 }
 
-// Change Tab 
+bannerIcon.onclick = function (e) {
+    bannerLayout(e);
+}
 
+// Change Theme 
 
-
-navTheme.onclick = function () {
-    favLayout();
+navTheme.onclick = function (e) {
+    favLayout(e);
+    bannerLayout(e);
 }
 // Handle
 
@@ -83,5 +89,26 @@ function favLayout() {
     libTabs.classList.add('hidden')
     mainLayout.classList.add('fav-theme')
     navTheme.classList.add('fav-theme')
+    navTheme.classList.add('fix-width')
+    navTheme.classList.remove('banner-theme')
     preventDefault()
 }
+
+function bannerLayout(e) {
+    musicLayout.classList.remove('hidden')
+    favIcon.classList.remove('active')
+    mainIcon.classList.remove('active')
+    libsIcon.classList.remove('active')
+    tabsIcon.classList.remove('active')
+    bannerIcon.classList.add('active')
+    tabs.classList.add("hidden")
+    mainTabs.classList.add("hidden")
+    libTabs.classList.add('hidden')
+    favTabs.classList.add('hidden')
+    navTheme.classList.add('banner-theme')
+    navTheme.classList.add('fix-width')
+    navTheme.classList.remove('fav-theme')
+    e.preventDefault();
+}
+
+// Banner layout
