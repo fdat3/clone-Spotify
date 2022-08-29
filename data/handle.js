@@ -21,6 +21,7 @@ favTabs = document.getElementById('banner-fav')
 mainLayout = document.getElementById('main__layout')
 musicLayout = document.getElementById('banner__music')
 navTheme = document.getElementById('navbar')
+playBtnScroll = document.getElementById('btn-scroll')
 
 
 // Click Icon
@@ -42,12 +43,6 @@ bannerIcon.onclick = function (e) {
     bannerLayout(e);
 }
 
-// Change Theme 
-
-navTheme.onclick = function (e) {
-    favLayout(e);
-    bannerLayout(e);
-}
 // Handle
 
 
@@ -59,6 +54,7 @@ function changeLayout() {
     tabs.classList.remove("hidden")
     mainTabs.classList.add("hidden")
     mainLayout.classList.remove('fav-theme')
+    musicLayout.classList.add('hidden')
     preventDefault()
 }
 
@@ -73,6 +69,7 @@ function libLayout() {
     tabs.classList.add("hidden")
     libTabs.classList.remove('hidden')
     mainLayout.classList.remove('fav-theme')
+    musicLayout.classList.add('hidden')
     preventDefault()
 }
 
@@ -91,6 +88,8 @@ function favLayout() {
     navTheme.classList.add('fav-theme')
     navTheme.classList.add('fix-width')
     navTheme.classList.remove('banner-theme')
+    musicLayout.classList.add('hidden')
+    bannerIcon.classList.remove('active')
     preventDefault()
 }
 
@@ -106,9 +105,14 @@ function bannerLayout(e) {
     libTabs.classList.add('hidden')
     favTabs.classList.add('hidden')
     navTheme.classList.add('banner-theme')
-    navTheme.classList.add('fix-width')
+    navTheme.classList.remove('fix-width')
     navTheme.classList.remove('fav-theme')
     e.preventDefault();
 }
 
-// Banner layout
+// Btn Scroll Play
+
+document.onscroll = function () {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop
+    playBtnScroll.classList.remove('hidden')
+}

@@ -549,6 +549,7 @@ h3.fav-status.fav-status-sm.title {
 }
 
 .head-banner-title {
+    margin: 0 0 50px 0;
     font-size: 5rem;
     color: var(--font-color);
     font-weight: 900;

@@ -37,7 +37,12 @@ const app = {
     isRandom: false,
     isRepeat: false,
     songs: [ // mang chua cac bai hat
-
+        {
+            name: 'Waiting For You',
+            singer: 'Mono',
+            path: './assets/music/WaitingForYou-MONOOnionn-7733882.mp3',
+            image: './assets/img/Singers/mono.jpg'
+        },
         {
             name: 'Lặng Thầm',
             singer: 'Noo Phước Thịnh',
@@ -1023,13 +1028,7 @@ const app = {
     handleEvents: function () { //xu li
         const _this = this //this global
 
-        // document.onscroll = function () {
-        //     const scrollTop = window.scrollY || document.documentElement.scrollTop
-        //     const NewcdWidth = cdWidth - scrollTop
 
-        //     cd.style.width = NewcdWidth > 0 ? NewcdWidth + 'px' : 0
-        //     cd.style.opacity = NewcdWidth / cdWidth
-        // }
 
         //Xu li khi phat / tam dung bai hat
 
@@ -1042,6 +1041,14 @@ const app = {
         }
 
         playIcon.onclick = function () {
+            if (_this.isPlaying) {
+                audio.pause()
+            } else {
+                audio.play()
+            }
+        }
+
+        playScroll.onclick = function () {
             if (_this.isPlaying) {
                 audio.pause()
             } else {

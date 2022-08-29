@@ -203,3 +203,15 @@ div#banner-fav {
 .fix-width {
     width: 100%;
 }
+
+.scroll-btn {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.btn-scroll-title {
+    margin: 0;
+    color: white;
+    text-transform: uppercase;
+}
