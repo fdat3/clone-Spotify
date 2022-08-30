@@ -762,6 +762,11 @@ const app = {
             const songId = song.path.split('.')[1].replace(/\s/g, ''); //regex to remove spacing 
             const html = `
                 <div id="${songId.split('/assets/music/')[1]}" class="song" data-dom="song-item" data-song="${song.path}">
+
+                    <div class="btn btn-toggle-play">
+                        <i class="fas fa-play icon-play"></i>
+                    </div>
+
                     <div class="thumb"
                     style="background-image: url('${song.image}') ;">
                     </div>
@@ -769,6 +774,13 @@ const app = {
                         <h3 class="title">${song.name}</h3>
                         <p class="author">${song.singer}</p>
                     </div>
+
+                    <div class="btn btn-mic">
+                        <span id="favorite-icon" class="material-symbols-outlined">
+                            favorite
+                        </span>
+                    </div>
+
                     <div class="option">
                         <i class="fas fa-ellipsis-h"></i>
                     </div>
@@ -1084,7 +1096,7 @@ const app = {
         }
         //Song change 
         progress.onchange = function (e) {
-            let currentTime = audio.duration * e.target.value / 100
+            let currentTime = Math.floor(audio.duration * e.target.value / 100)
 
             audio.currentTime = currentTime ? currentTime : 0
         }

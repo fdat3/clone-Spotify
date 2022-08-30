@@ -186,6 +186,7 @@
       <!-- Home Page -->
 
       <div id="main__page" class="main__page">
+
         <div class="your__track">
           <div class="welcome morning flex-block">
             <h2>Good Morning</h2>
@@ -203,6 +204,7 @@
             </div>
           </div>
         </div>
+
         <div class="your__topic">
           <div class="welcome flex-block">
             <h2><a href="">Của riêng bạn</a></h2>
@@ -514,13 +516,16 @@
             <div class="body-banner-text">
               <h1 class="body-banner-title">Bài hát bạn thích sẽ xuất hiện ở đây</h1>
               <span class="body-banner-description">Lưu bài hát bằng cách ấn vào biểu tưởng trái tim</span>
-              <a href="" class="btn-large body-banner-link"><span>TÌM BÀI HÁT</span></a>
+              <a href="" id="search" class="btn-large body-banner-link"><span>TÌM BÀI HÁT</span></a>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+
+
+
   <!--Dashboard-->
   <div class="dashboard">
     <!-- Song Info -->
@@ -538,6 +543,8 @@
             queue_play_next
           </span>
         </div>
+
+
       </div>
       <!--Header-->
       <header>
@@ -568,6 +575,7 @@
         <div class="btn btn-repeat">
           <i class="fas fa-redo"></i>
         </div>
+
       </div>
 
       <div class="range col-lg-12">
@@ -594,6 +602,19 @@
           devices_other
         </span>
       </div>
+      <div class="btn btn-volume">
+        <span class="material-symbols-outlined">
+          volume_up
+        </span>
+
+        <div class="btn btn-volume">
+          <input type="range" class="progress volume-progrees" value="100" step="1" min="0" max="100">
+          <div class="progress__track volume--track">
+            <div class="progress__track-update" style="width: 79%;"></div>
+          </div>
+        </div>
+      </div>
+
     </div>
 
 
@@ -609,7 +630,6 @@
             <h2 class="head-banner-description">PLAYLIST CỘNG TÁC</h2>
             <h1 class="head-banner-title">#1 Playlist của bạn</h1>
             <div class="header-banner-profile">
-              <img class="header-banner-profile-img" src="./assets/img/Banner/avatar.jpg" alt="">
               <a class="head-banner-profile-link" href="">frenki3</a>
             </div>
           </div>
@@ -638,16 +658,29 @@
         </div>
       </div>
     </div>
+
     <div class="player">
       <!--Playlist-->
       <div class="playlist col-lg-10">
         <div id="songId" class="song" data-dom="song-item" data-song="">
+          <div class="btn btn-toggle-play">
+            <i class="fas fa-play icon-play"></i>
+          </div>
+
           <div class="thumb" style="background-image: url('') ;">
           </div>
+
           <div class="body">
             <h3 class="title"></h3>
             <p class="author"></p>
           </div>
+
+          <div class="btn btn-mic">
+            <span id="favorite-icon" class="material-symbols-outlined">
+              favorite
+            </span>
+          </div>
+
           <div class="option">
             <i class="fas fa-ellipsis-h"></i>
           </div>
@@ -655,8 +688,6 @@
       </div>
     </div>
   </div>
-
-
 </body>
 
 <script src="https://kit.fontawesome.com/491fa68464.js" crossorigin="anonymous"></script>

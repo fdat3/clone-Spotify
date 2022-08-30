@@ -4,7 +4,6 @@ favoriteIcon = document.getElementById("favorite-icon")
 favoriteIcon.onclick = function () { changeStatus() };
 
 function changeStatus() {
-
     favoriteIcon.classList.toggle("change-status");
 }
 
@@ -22,6 +21,7 @@ mainLayout = document.getElementById('main__layout')
 musicLayout = document.getElementById('banner__music')
 navTheme = document.getElementById('navbar')
 playBtnScroll = document.getElementById('btn-scroll')
+searchBtn = document.getElementById('search')
 
 
 // Click Icon
@@ -105,14 +105,24 @@ function bannerLayout(e) {
     libTabs.classList.add('hidden')
     favTabs.classList.add('hidden')
     navTheme.classList.add('banner-theme')
-    navTheme.classList.remove('fix-width')
+    navTheme.classList.add('fix-width')
     navTheme.classList.remove('fav-theme')
+    e.preventDefault();
+
+    document.onscroll = function () {
+        const scrollTop = window.scrollY || document.documentElement.scrollTop
+        playBtnScroll.classList.remove('hidden')
+    }
+}
+
+// Click Search 
+
+searchBtn.onclick = function (e) {
+    tabs.classList.remove("hidden")
+    navTheme.classList.remove('fav-theme')
+    favTabs.classList.add('hidden')
+    tabsIcon.classList.add('active')
+    favIcon.classList.remove('active')
     e.preventDefault();
 }
 
-// Btn Scroll Play
-
-document.onscroll = function () {
-    const scrollTop = window.scrollY || document.documentElement.scrollTop
-    playBtnScroll.classList.remove('hidden')
-}

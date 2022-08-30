@@ -215,3 +215,7 @@ div#banner-fav {
     color: white;
     text-transform: uppercase;
 }
+
+.order-option {
+    display: flex;
+}

@@ -31,6 +31,11 @@ html {
   display: none;
 }
 
+.btn-volume {
+  display: flex;
+  align-items: center;
+}
+
 .control.playing .icon-pause,
 .btn-toggle-scroll-play.playing .icon-pause {
   display: inline-block;
@@ -41,12 +46,17 @@ html {
   display: none;
 }
 
+input.progress.volume-progrees {
+  width: 80px;
+  background-color: white;
+}
+
 .dashboard {
   align-items: center;
   justify-content: space-between;
   bottom: 0;
   position: fixed;
-  background-color: var(--main-color);
+  background-color: #181818;
   z-index: 10;
   width: 100%;
   padding: 10px;
@@ -156,7 +166,7 @@ header h2 {
 /* PLAYLIST */
 .playlist {
   height: 1000px;
-  background-color: var(--main-color);
+  background-color: #121212;
   padding: 12px;
   float: right;
 }
@@ -232,4 +242,17 @@ header h2 {
 
 p.author {
   margin: 0;
+}
+
+.song .btn-toggle-play {
+  display: none;
+}
+
+.song .btn.btn-mic {
+  display: none;
+}
+
+.song:hover .btn-toggle-play,
+.song:hover .btn.btn-mic {
+  display: block;
 }
