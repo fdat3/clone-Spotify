@@ -31,7 +31,7 @@ nav.navbar.navbar-expand-lg.bg-light {
 }
 
 .content__right {
-    position: absolute;
+    position: relative;
     height: 100%;
     background-color: #181818;
     padding: 18px;
