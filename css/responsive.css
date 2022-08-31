@@ -1,6 +1,6 @@
 /* Laptop 1024px */
 
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
     .content__left {
         width: 25%;
     }
@@ -110,7 +110,7 @@
 
 /* Tablet 768px */
 
-@media (max-width: 768px) {
+@media (min-width: 739px) and (max-width: 1023px) {
 
     nav.navbar.navbar-expand-lg.bg-light {
         width: 73%;
