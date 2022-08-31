@@ -749,7 +749,7 @@ const app = {
 
 
     render: function () { // hien thi cac bai hat
-        const htmls = this.songs.forEach(song => {
+        const htmls = this.songs.map(song => {
 
             /**
              * @params of song
