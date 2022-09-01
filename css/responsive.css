@@ -253,3 +253,138 @@
         width: 73%;
     }
 }
+
+@media (min-width: 424px) and (max-width: 739px) {
+
+    nav.navbar.navbar-expand-lg.bg-light {
+        width: 100%;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .list-group:nth-child(2),
+    .library,
+    .download {
+        display: none;
+    }
+
+    li.list-group-item {
+        padding: 0;
+        gap: 10px;
+        justify-content: space-around;
+    }
+
+    .list-group {
+        padding: 0;
+        margin: 0;
+    }
+
+    .content {}
+
+
+    .content__left {
+        width: 100%;
+        position: fixed;
+        height: 70px;
+        bottom: 0;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .list-group:nth-child(1) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .content__right {
+        width: 100%;
+    }
+
+    .track {
+        gap: 10px;
+    }
+
+    .track__wrap {
+        min-width: 184px;
+    }
+
+    .track__title {
+        width: 50%;
+        font-weight: 800;
+        font-size: 5px;
+        padding: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        margin: 0;
+    }
+
+    .center {
+        gap: 6px;
+    }
+
+    .your__playlist-wrap {
+        width: 50%;
+    }
+
+    .topic,
+    .artist,
+    .podcast,
+    .relax,
+    .favorite-song,
+    .spotify-choice,
+    .trending,
+    .singer {
+        flex-wrap: nowrap;
+    }
+
+    .dashboard {
+        display: none;
+    }
+
+    hr {
+        display: none;
+    }
+
+    .rcm__list {
+        flex-wrap: wrap;
+        min-width: 760px;
+    }
+
+    .rcm__topic {
+        width: 50%;
+    }
+
+    img.rcm__img,
+    img.rcm__img-sm {
+        width: 50%;
+    }
+
+    .recommend.all-content.rcm__list-sm {
+        gap: 10px;
+    }
+
+    .rcm__topic-sm {
+        width: 48%;
+    }
+
+    .fav-playlist {
+        flex-wrap: wrap;
+    }
+
+    .fav-card {
+        width: 380px;
+    }
+
+    .your__playlist-wrap.col-lg-3 {
+        width: 23%;
+    }
+
+    .play-btn-main {
+        bottom: 88px;
+        left: 68px;
+    }
+}
