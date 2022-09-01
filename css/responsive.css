@@ -254,7 +254,7 @@
     }
 }
 
-@media (min-width: 424px) and (max-width: 739px) {
+@media (max-width: 424px) {
 
     nav.navbar.navbar-expand-lg.bg-light {
         width: 100%;
