@@ -254,7 +254,7 @@
     }
 }
 
-@media (max-width: 424px) {
+@media (min-width: 374px) and (max-width: 424px) {
 
     nav.navbar.navbar-expand-lg.bg-light {
         width: 100%;
@@ -308,7 +308,7 @@
     }
 
     .track__wrap {
-        min-width: 184px;
+        min-width: 183px;
     }
 
     .track__title {
