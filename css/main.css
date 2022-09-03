@@ -7,6 +7,7 @@ nav.navbar.navbar-expand-lg.bg-light {
     position: fixed;
     right: 0;
     top: 0;
+    width: 83.3333%;
 }
 
 .search-bg {
@@ -534,7 +535,7 @@ h3.fav-status.fav-status-sm.title {
 }
 
 .head-banner-content-music {
-    background: linear-gradient(to top, rgb(9, 32, 63) 0%, rgb(83, 120, 149) 100%);
+    background: linear-gradient(359deg, rgb(0, 0, 0) -10.7%, rgb(53, 92, 125) 88.8%);
     float: right;
     padding: 30px;
 }

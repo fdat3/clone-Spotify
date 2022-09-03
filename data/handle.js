@@ -68,7 +68,6 @@ function addBanner() {
     libTabs.classList.add('hidden')
     favTabs.classList.add('hidden')
     navTheme.classList.remove('banner-theme')
-    navTheme.classList.add('fix-width')
     search.classList.add('hidden')
     e.preventDefault();
 }
@@ -141,7 +140,6 @@ function favLayout() {
     libTabs.classList.add('hidden')
     mainLayout.classList.add('fav-theme')
     navTheme.classList.add('fav-theme')
-    navTheme.classList.add('fix-width')
     navTheme.classList.remove('banner-theme')
     musicLayout.classList.add('hidden')
     search.classList.add('hidden')
@@ -162,7 +160,6 @@ function bannerLayout(e) {
     mainTabs.classList.add("hidden")
     libTabs.classList.add('hidden')
     favTabs.classList.add('hidden')
-    navTheme.classList.add('fix-width')
     search.classList.add('hidden')
     addPlaylist.classList.remove('active')
     addPlaylistBanner.classList.add('hidden')

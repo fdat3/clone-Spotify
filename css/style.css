@@ -166,9 +166,9 @@ header h2 {
 /* PLAYLIST */
 .playlist {
   height: 1000px;
-  background-color: #121212;
   padding: 12px;
   float: right;
+  width: 100%;
 }
 
 .song {
@@ -176,7 +176,6 @@ header h2 {
   align-items: center;
   margin-bottom: 12px;
   padding: 8px 16px;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
 }
 
 .song__info {
