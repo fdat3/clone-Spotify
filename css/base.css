@@ -12,8 +12,8 @@
 .link {
     font-weight: 600;
     text-decoration: none;
+    color: aquamarine;
 }
-
 
 hr {
     height: 0.5px;
@@ -114,9 +114,6 @@ hr {
     color: white;
 }
 
-.show {
-    display: block;
-}
 
 .current-song {
     background-color: hsla(0, 0%, 100%, .2);
@@ -155,6 +152,8 @@ button:hover {
     background-color: var(--btn-color);
     border-radius: 50%;
 }
+
+
 
 
 .play-icon:hover {
@@ -218,4 +217,35 @@ div#banner-fav {
 
 .order-option {
     display: flex;
+}
+
+input[type="text"] {
+    text-align: center;
+    padding: 10px;
+    border-radius: 25px;
+    border: none;
+    width: 300px;
+}
+
+.text-playlist {
+    align-items: baseline;
+}
+
+.title-playlist {
+    font-size: 1.3rem;
+}
+
+.playlist-find {
+    background-color: black !important;
+    border-radius: 5px !important;
+}
+
+.close-icon {
+    color: white;
+    font-size: 2rem;
+}
+
+.close-icon:hover,
+.search-option:hover {
+    cursor: pointer;
 }

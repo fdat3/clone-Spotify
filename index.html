@@ -64,8 +64,8 @@
         </ul>
 
         <ul class="list-group">
-          <a class="home link" href="">
-            <li class="list-group-item" aria-current="true">
+          <a class="home link" href="#addPlaylist">
+            <li id="addIcon" class="list-group-item" aria-current="true">
               <span class="material-symbols-outlined">add</span>
               Tạo playlist
             </li>
@@ -127,6 +127,15 @@
               </span>
             </a>
 
+            <div id="search-input" class="search-input hidden">
+              <div class="input">
+                <span class="material-symbols-outlined search-icon">
+                  search
+                </span>
+                <input type="text">
+              </div>
+            </div>
+
             <div id="btn-scroll" class="play-btn-scroll play-btn-lg play-btn-main hidden">
               <div class="scroll-btn">
                 <div class="btn btn-toggle-scroll-play">
@@ -150,7 +159,6 @@
                   <img class="avatar"
                     src="https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=354747398346240&height=300&width=300&ext=1663553271&hash=AeTaP3IXuTPJd589yzQ"
                     alt="">
-                  frenki3
                 </a>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item center direction" href="">Tài khoản
@@ -187,7 +195,6 @@
       <!-- Home Page -->
 
       <div id="main__page" class="main__page">
-
         <div class="your__track">
           <div class="welcome morning flex-block">
             <h2>Good Morning</h2>
@@ -403,7 +410,6 @@
       <!-- Searching Page -->
 
       <div id="search__page" class="search__page hidden" style="height: auto;">
-
         <div class="search__content">
           <div class="relate__content">
             <div class="search__title flex-block">
@@ -445,7 +451,6 @@
       <!-- Library Page -->
 
       <div id="lib__page" class="lib__page hidden">
-
         <!-- Playlist -->
         <div id="y-playlist" class="y-playlist">
           <div class="fav-playlist col-lg-12">
@@ -492,6 +497,9 @@
         <hr>
       </div>
 
+
+
+
       <!-- Banner -->
 
       <div id="banner-fav" class="banner hidden">
@@ -523,6 +531,93 @@
         </div>
       </div>
     </div>
+  </div>
+
+  <!-- Create Playlist -->
+  <div id="create-playlist" class="create-playlist col-lg-10 hidden">
+    <div class="head-banner">
+      <div class="head-banner-content">
+        <div class="head-banner-info">
+          <span class="material-symbols-outlined music_note-icon">
+            music_note
+          </span>
+          <div class="head-banner-text">
+            <h2 class="head-banner-description">PLAYLIST</h2>
+            <h1 class="head-banner-title">Tạo danh sách yêu thích của bạn</h1>
+            <div class="header-banner-profile">
+              <a class="head-banner-profile-link" href="">frenki3</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="option">
+        <i class="fas fa-ellipsis-h"></i>
+      </div>
+      <hr>
+
+      <div class="body-banner text-center">
+        <div class="body-banner-content">
+          <div class="body-banner-text text-playlist">
+            <div id="playlist-search" class="play-list-search">
+              <div class="play-list-control">
+                <h1 class="body-banner-title title-playlist">Hãy cùng tìm nội dung cho danh sách phát của bạn</h1>
+                <span id="close-icon" class="material-symbols-outlined close-icon">
+                  close
+                </span>
+              </div>
+              <div class="input">
+                <div class="logo">
+                  <span class="material-symbols-outlined search-icon">
+                    search
+                  </span>
+                </div>
+                <div class="input">
+                  <input type="text" class="playlist-find" placeholder="Tìm bài hát và tập podcast">
+                </div>
+              </div>
+            </div>
+
+            <div id="playlist-rcm" class="play-list-recommend hidden">
+              <div class="head-playlist-rcm">
+                <div class="title-playlist-rcm">
+                  <p class="search-option">Tìm thêm</p>
+                  <h1>Đề xuất</h1>
+                  <p>Dựa trên tiêu đề danh sách phát này</p>
+                </div>
+
+                <div class="song-rcm">
+                  <div class="player-playlist">
+                    <!--Playlist-->
+                    <div class="playlist-rcm">
+                      <div id="songId" class="song" data-dom="song-item" data-song="">
+                        <div id="btn-search-play" class="btn">
+                          <i class="fas fa-play icon-play"></i>
+                        </div>
+
+                        <div class="thumb" style="background-image: url('') ;">
+                        </div>
+
+                        <div class="body body-rcm">
+                          <h3 class="title"></h3>
+                          <p class="author"></p>
+                        </div>
+
+                        <div class="add-song">
+                          <p class="song-link"><a class="link" href=""></a></p>
+                          <button class="btn-small">Thêm</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
   </div>
 
 

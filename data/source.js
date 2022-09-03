@@ -30,6 +30,7 @@ const favoriteSong = $('.favorite-song')
 const spotify = $('.spotify-choice')
 const trending = $('.trending')
 const singer = $('.singer')
+const playlistSearch = $('.playlist-rcm')
 
 const app = {
     currentIndex: 0, // lay bai hat dau tien
@@ -690,6 +691,25 @@ const app = {
         }
     ],
 
+    search: [
+        {
+            name: 'Nhắm mắt thấy mùa hè',
+            singer: 'Nguyên Hà',
+            path: '.assets/music/Nhắm Mắt Thấy Mùa Hè  Nguyên Hà Live.mp3',
+            image: './assets/img/Singers/NguyenHa.jpg',
+            link: 'Nhắm mắt thấy mùa hè'
+        },
+        {
+            name: 'Tháng mấy em nhớ anh',
+            singer: 'Nguyên Hà',
+            path: '.assets/music/Tháng Mấy Em Nhớ Anh  Hà Anh Tuấn the veston concert.mp3',
+            image: './assets/img/Singers/HaAnhTuan-live.jpg',
+            link: 'Tháng mấy em nhớ anh'
+        },
+    ],
+
+
+
     convertStringToHtml: (str) => {
         const parser = new DOMParser();
         const doc = parser.parseFromString(str, 'text/html');
@@ -749,7 +769,7 @@ const app = {
 
 
     render: function () { // hien thi cac bai hat
-        const htmls = this.songs.map(song => {
+        const htmls = this.songs.forEach(song => {
 
             /**
              * @params of song
@@ -1026,6 +1046,32 @@ const app = {
             `
         })
         singer.innerHTML = singerChoice.join('')
+
+        const musicRcm = this.search.map(seacrhMusic => {
+            return `
+            <div class="playlist-rcm">
+                      <div id="songId" class="song" data-dom="song-item" data-song="${seacrhMusic.path}">
+                        <div id="btn-search-play" class="btn">
+                          <i class="fas fa-play icon-play"></i>
+                        </div>
+
+                        <div class="thumb" style="background-image: url('${seacrhMusic.image}') ;">
+                        </div>
+
+                        <div class="body body-rcm ">
+                          <h3 class="title">${seacrhMusic.name}</h3>
+                          <p class="author">${seacrhMusic.singer}</p>
+                        </div>
+
+                        <div class="add-song">
+                          <p class="song-link"><a class="link" href="">${seacrhMusic.link}</a></p>
+                          <button class="btn-small">Thêm</button>
+                        </div>
+                      </div>
+                    </div>
+            `
+        })
+        playlistSearch.innerHTML = musicRcm.join('')
     },
 
 
@@ -1039,8 +1085,6 @@ const app = {
 
     handleEvents: function () { //xu li
         const _this = this //this global
-
-
 
         //Xu li khi phat / tam dung bai hat
 
@@ -1068,8 +1112,7 @@ const app = {
             }
         }
 
-        song.onClick = function () {
-            song.classList.add('active')
+        song.onclick = function () {
             audio.play();
         }
 
@@ -1145,6 +1188,8 @@ const app = {
         // }
 
         // Change Layout
+
+
     },
 
     loadCurrentSong: function () {

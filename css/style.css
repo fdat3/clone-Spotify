@@ -256,3 +256,21 @@ p.author {
 .song:hover .btn.btn-mic {
   display: block;
 }
+
+
+/* #main__page,
+#search__page,
+#lib__page,
+#banner-fav {
+  display: none;
+} */
+
+.music_note-icon {
+  box-shadow: 0 8px 8px rgb(0 0 0 / 30%);
+  padding: 100px;
+  color: white;
+}
+
+.play-list-search {
+  width: 100%;
+}
