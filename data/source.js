@@ -706,6 +706,20 @@ const app = {
             image: './assets/img/Singers/HaAnhTuan-live.jpg',
             link: 'Tháng mấy em nhớ anh'
         },
+        {
+            name: 'Nàng Thơ',
+            singer: 'Hoàng Dũng',
+            path: '.assets/music/Nang Tho - Hoang Dung.mp3',
+            image: './assets/img/Singers/HoangDung.jpg',
+            link: 'Nàng Thơ'
+        },
+        {
+            name: 'Khi người mình yêu khóc',
+            singer: 'Phan Mạnh Quỳnh',
+            path: '.assets/music/Khi Người Mình Yêu Khóc live.mp3',
+            image: './assets/img/Singers/PhanManhQuynh',
+            link: 'Nàng Thơ'
+        },
     ],
 
 
@@ -1050,7 +1064,7 @@ const app = {
         const musicRcm = this.search.map(seacrhMusic => {
             return `
             <div class="playlist-rcm">
-                      <div id="songId" class="song" data-dom="song-item" data-song="${seacrhMusic.path}">
+                      <div id="songId" class="song song-rcm-list" data-dom="song-item" data-song="${seacrhMusic.path}">
                         <div id="btn-search-play" class="btn">
                           <i class="fas fa-play icon-play"></i>
                         </div>
@@ -1186,10 +1200,6 @@ const app = {
         // playlist.onclick = function (e) {
         //     audio.play();
         // }
-
-        // Change Layout
-
-
     },
 
     loadCurrentSong: function () {

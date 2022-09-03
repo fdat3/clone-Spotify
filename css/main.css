@@ -534,7 +534,7 @@ h3.fav-status.fav-status-sm.title {
 }
 
 .head-banner-content-music {
-    background-color: rgb(8, 144, 208);
+    background: linear-gradient(to top, rgb(9, 32, 63) 0%, rgb(83, 120, 149) 100%);
     float: right;
     padding: 30px;
 }
@@ -643,11 +643,12 @@ button:hover {
 /* Create Playlist */
 
 div#create-playlist {
-    background-color: #333;
+    background: linear-gradient(359deg, rgba(0, 0, 0, 0.93) 11.2%, rgb(63, 61, 61) 78.9%);
     height: 100%;
-    position: relative;
+    position: absolute;
     margin: 30px 0;
-    float: right;
+    right: 0;
+    min-height: 1000px;
 }
 
 .play-list-control {
@@ -698,10 +699,10 @@ p.search-option {
     display: block;
 }
 
-.tab {
-    display: none;
-}
-
 .tab.show {
     display: block;
+}
+
+.song-rcm-list {
+    box-shadow: none;
 }
