@@ -113,6 +113,13 @@ hr {
     color: white;
 }
 
+.tab-content>.hidden {
+    display: none;
+}
+
+.tab-content>.show {
+    display: block;
+}
 
 .current-song {
     background-color: hsla(0, 0%, 100%, .2);

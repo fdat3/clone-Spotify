@@ -725,6 +725,6 @@ p.search-option {
     padding: 10px;
 }
 
-.tab-pane {
-    display: none;
+.show {
+    display: block;
 }

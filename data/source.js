@@ -1207,10 +1207,10 @@ const app = {
 
             tab.onclick = function () {
                 $(".tab-item.select").classList.remove("select");
-                $(".tab-pane.hidden").classList.remove("hidden");
+                $(".tab-pane.show").classList.remove("show");
 
                 tab.classList.add("select");
-                pane.classList.add("hidden");
+                pane.classList.add("show");
             };
         });
     },
