@@ -26,7 +26,8 @@ closeIcon.onclick = function () {
 
 
 
-// Search Input 
+
+// Search Input
 
 search = document.getElementById('search-input')
 
@@ -48,7 +49,7 @@ searchBtn = document.getElementById('search')
 tabsLib = document.getElementById('tabs')
 
 
-// Create Playlist 
+// Create Playlist
 
 addPlaylist = document.getElementById('addIcon')
 addPlaylistBanner = document.getElementById('create-playlist')
@@ -62,11 +63,12 @@ function addBanner() {
     mainIcon.classList.remove('active')
     libsIcon.classList.remove('active')
     tabsIcon.classList.remove('active')
-    bannerIcon.classList.add('active')
+    bannerIcon.classList.remove('active')
     searchPage.classList.add("hidden")
     mainTabs.classList.add("hidden")
     libTabs.classList.add('hidden')
     favTabs.classList.add('hidden')
+    tabsLib.classList.add('hidden')
     navTheme.classList.remove('banner-theme')
     search.classList.add('hidden')
     e.preventDefault();
@@ -108,10 +110,11 @@ function changeLayout() {
     mainLayout.classList.remove('fav-theme')
     musicLayout.classList.add('hidden')
     search.classList.remove('hidden')
+    tabsLib.classList.add('hidden')
     preventDefault()
 }
 
-// lib layout 
+// lib layout
 
 function libLayout() {
     libsIcon.classList.add('active')
@@ -128,7 +131,7 @@ function libLayout() {
     preventDefault()
 }
 
-// favorite layout 
+// favorite layout
 
 function favLayout() {
     searchPage.classList.add("hidden")
@@ -180,7 +183,7 @@ function bannerLayout(e) {
     }
 }
 
-// Click Search 
+// Click Search
 
 searchBtn.onclick = function (e) {
     searchPage.classList.remove("hidden")
@@ -189,9 +192,34 @@ searchBtn.onclick = function (e) {
     tabsIcon.classList.add('active')
     favIcon.classList.remove('active')
     tabsLib.classList.add('hidden')
-
     e.preventDefault();
 }
 
 
-// Change Tab
+// Nav to profile
+
+profile = document.getElementById('profile')
+profileNav = document.getElementById('profile-nav')
+
+profileNav.onclick = function () {
+    navProfile();
+}
+
+function navProfile() {
+    profile.classList.remove('hidden')
+
+    musicLayout.classList.add('hidden')
+    favIcon.classList.remove('active')
+    mainIcon.classList.remove('active')
+    libsIcon.classList.remove('active')
+    tabsIcon.classList.remove('active')
+    bannerIcon.classList.remove('active')
+    searchPage.classList.add("hidden")
+    mainTabs.classList.add("hidden")
+    libTabs.classList.add('hidden')
+    favTabs.classList.add('hidden')
+    search.classList.add('hidden')
+    addPlaylist.classList.remove('active')
+    addPlaylistBanner.classList.add('hidden')
+    tabsLib.classList.add('hidden')
+}

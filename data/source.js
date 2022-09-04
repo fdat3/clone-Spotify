@@ -31,6 +31,11 @@ const spotify = $('.spotify-choice')
 const trending = $('.trending')
 const singer = $('.singer')
 const playlistSearch = $('.playlist-rcm')
+const yPodcast = $('.y-podcastrcm')
+const ySinger = $('.y-singerrcm')
+const yArtist = $('.y-artistrcm')
+const singerMonth = $('.singer-month')
+const playlistMonth = $('.playlist-month')
 
 const tabs = $$(".tab-item");
 const panes = $$(".tab-pane");
@@ -728,6 +733,159 @@ const app = {
         },
     ],
 
+    yPodcastLists: [
+        {
+            title: '78. Không Bỏ Cuộc',
+            image: './assets/img/Podcasts/ab67656300005f1f5b61945f5f6bf820d3d43fbe.jpg',
+            time: '22 Thg 8 - 15 phút',
+        },
+        {
+            title: '#21 Làm Gì Khi Thấy Mình Giậm Chân Tại Chỗ',
+            image: './assets/img/Podcasts/ab67656300005f1f1d1a9aa284183a74d078139c.jpg',
+            time: 'Thg 12, 2021 - 26 phút',
+        },
+        {
+            title: '#9 - Nói ít. Hiểu nhiều.',
+            image: './assets/img/Podcasts/ab67656300005f1faa4d330a74ae3c0b171f2f9c.jpg',
+            time: '30 Thg 7 - 18 phút',
+        },
+        {
+            title: 'Những ngộ nhận về nghỉ học và làm giàu',
+            image: './assets/img/Podcasts/ab67656300005f1fc960ee681446bd4f1832cd22.jpg',
+            time: '20 Thg 1 - 14 phút',
+        },
+        {
+            title: 'Khoá học Xây dựng nội lực để thành công - Phần 12 - Phát triển tư duy mở ',
+            image: './assets/img/Podcasts/ab67656300005f1fbc95b30bd3c261efc284f34e.jpg',
+            time: '23 Thg 8 - 18 phút',
+        },
+        {
+            title: 'Học cách làm người theo đúng 8 bước của Khổng Tử | Khách mời: TS Trần Hữu Đức | OB EP1',
+            image: './assets/img/Podcasts/ab67656300005f1f2244b5edeaf9986e9bf16ba1.jpg',
+            time: '22 Thg 2 - 64 phút',
+        }
+    ],
+
+    ySingerLists: [
+        {
+            name: 'Hà Anh Tuấn',
+            description: 'Nghệ sĩ',
+            image: './assets/img/Singers/ab6761610000f17899649a8a989bcacb12960591.jpg'
+        },
+        {
+            name: 'Miu Lê',
+            description: 'Nghệ sĩ',
+            image: './assets/img/Singers/ab6761610000f17807a297790e67ba9d5d34508e.jpg'
+        },
+        {
+            name: 'Đức Phúc',
+            description: 'Nghệ sĩ',
+            image: './assets/img/Singers/ab6761610000f17817b1620d6e1312038870ea7d.jpg'
+        },
+        {
+            name: 'Đông Nhi',
+            description: 'Nghệ sĩ',
+            image: './assets/img/Singers/ab6761610000f1789a466e1eec9a42668786c80f.jpg'
+        },
+        {
+            name: 'Mr.Siro',
+            description: 'Nghệ sĩ',
+            image: './assets/img/Singers/ab67616d0000b2735a73c4f1a81c9bfd8df8a243.jpg'
+        },
+        {
+            name: 'Thùy Chi',
+            description: 'Nghệ sĩ',
+            image: './assets/img/Singers/ab6761610000f1780e7785316847995f2313089b.jpg'
+        }
+    ],
+
+    yArtistLists: [
+        {
+            title: 'Ultra Gaming',
+            image: './assets/img/Albums/ab67706f0000000232fa3f26c169600e0b88749e.jpg',
+            description: 'Dance, Bass, EDM, Trap: the perfect gaming mix.',
+        },
+        {
+            title: 'Power Hour',
+            image: './assets/img/Albums/ab67706f00000002a0771224543218ad74dc1c7b.jpg',
+            description: 'Tap it back or go for a spin with these uptempo tracks!',
+        },
+        {
+            title: 'KSHMR Radio',
+            image: './assets/img/Albums/vi',
+            description: 'Của Spotify',
+        },
+        {
+            title: 'Beast Mode',
+            image: './assets/img/Albums/ab67706f000000029249b35f23fb596b6f006a15.jpg',
+            description: 'Get your beast mode on!',
+        },
+        {
+            title: 'Motivation Mix',
+            image: './assets/img/Albums/ab67706f000000025f2635e031078672e7b384a5.jpg',
+            description: 'Uplifting and energetic music that helps you stay motivated.',
+        },
+        {
+            title: 'Happy Beats',
+            image: './assets/img/Albums/ab67706f0000000225d50fa7cc51b307364050f5.jpg',
+            description: 'Feel-good dance music!',
+        }
+    ],
+    singerMonthLists: [
+        {
+            name: 'MONO',
+            description: 'Nghệ sĩ',
+            image: './assets/img/Singers/mono.jpg'
+        },
+        {
+            name: 'Noo Phước Thịnh',
+            description: 'Nghệ sĩ',
+            image: './assets/img/Singers/NooPhuocThinh.jpg'
+        },
+        {
+            name: 'The Weeknd',
+            description: 'Nghệ sĩ',
+            image: './assets/img/Singers/The_Weeknd.webp'
+        },
+        {
+            name: 'Hà Anh Tuấn',
+            description: 'Nghệ sĩ',
+            image: './assets/img/Singers/HaAnhTuan.jpg'
+        }
+    ],
+
+    songMonthLists: [
+        {
+            name: 'Nhắm mắt thấy mùa hè',
+            singer: 'Nguyên Hà',
+            path: '.assets/music/Nhắm Mắt Thấy Mùa Hè  Nguyên Hà Live.mp3',
+            image: './assets/img/Singers/NguyenHa.jpg',
+            link: 'Nhắm mắt thấy mùa hè'
+        },
+        {
+            name: 'Tháng mấy em nhớ anh',
+            singer: 'Nguyên Hà',
+            path: '.assets/music/Tháng Mấy Em Nhớ Anh  Hà Anh Tuấn the veston concert.mp3',
+            image: './assets/img/Singers/HaAnhTuan-live.jpg',
+            link: 'Tháng mấy em nhớ anh'
+        },
+        {
+            name: 'Nàng Thơ',
+            singer: 'Hoàng Dũng',
+            path: '.assets/music/Nang Tho - Hoang Dung.mp3',
+            image: './assets/img/Singers/HoangDung.jpg',
+            link: 'Nàng Thơ'
+        },
+        {
+            name: 'Khi người mình yêu khóc',
+            singer: 'Phan Mạnh Quỳnh',
+            path: '.assets/music/Khi Người Mình Yêu Khóc live.mp3',
+            image: './assets/img/Singers/PhanManhQuynh',
+            link: 'Nàng Thơ'
+        },
+    ],
+
+
 
 
     convertStringToHtml: (str) => {
@@ -1071,10 +1229,6 @@ const app = {
             return `
             <div class="playlist-rcm">
                       <div id="songId" class="song song-rcm-list" data-dom="song-item" data-song="${seacrhMusic.path}">
-                        <div id="btn-search-play" class="btn">
-                          <i class="fas fa-play icon-play"></i>
-                        </div>
-
                         <div class="thumb" style="background-image: url('${seacrhMusic.image}') ;">
                         </div>
 
@@ -1092,6 +1246,109 @@ const app = {
             `
         })
         playlistSearch.innerHTML = musicRcm.join('')
+
+        const yPodcastRcm = this.yPodcastLists.map(yPodcastList => {
+            return `
+            <div class="your__playlist-wrap col-lg-2">
+            <div class="card your__playlist-card">
+              <img class="your__playlist-img" src="${yPodcastList.image}" class="card-img-top" alt="">
+              <div class="play-btn play-btn-main play-btn-lg">
+                <span class="material-symbols-outlined play-icon">
+                  play_arrow
+                </span>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">${yPodcastList.title}</h5>
+                <p class="card-text">${yPodcastList.time}</p>
+              </div>
+            </div>
+          </div>
+            `
+        })
+        yPodcast.innerHTML = yPodcastRcm.join('')
+
+        const ySingerRcm = this.ySingerLists.map(ySingerList => {
+            return `
+            <div class="your__playlist-wrap col-lg-2">
+              <div class="card your__playlist-card">
+                <img class="your__playlist-img your__singer-img" src="${ySingerList.image}" class="card-img-top" alt="">
+                <div class="play-btn play-btn-lg play-btn-main">
+                  <span class="material-symbols-outlined play-icon">
+                    play_arrow
+                  </span>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">${ySingerList.name}</h5>
+                  <p class="card-text">${ySingerList.description}</p>
+                </div>
+              </div>
+            </div>
+            `
+        })
+        ySinger.innerHTML = ySingerRcm.join('')
+
+        const yArtistRcm = this.yArtistLists.map(yArtistList => {
+            return `
+            <div class="your__playlist-wrap col-lg-2">
+            <div class="card your__playlist-card">
+              <img class="your__playlist-img" src="${yArtistList.image}" class="card-img-top" alt="">
+              <div class="play-btn play-btn-main play-btn-lg">
+                <span class="material-symbols-outlined play-icon">
+                  play_arrow
+                </span>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">${yArtistList.title}</h5>
+                <p class="card-text">${yArtistList.description}</p>
+              </div>
+            </div>
+          </div>
+            `
+        })
+
+        yArtist.innerHTML = yArtistRcm.join('')
+
+        const mSinger = this.singerMonthLists.map(singerMonthList => {
+            return `
+            <div class="your__playlist-wrap col-lg-2">
+              <div class="card your__playlist-card">
+                <img class="your__playlist-img your__singer-img" src="${singerMonthList.image}" class="card-img-top" alt="">
+                <div class="play-btn play-btn-lg play-btn-main">
+                  <span class="material-symbols-outlined play-icon">
+                    play_arrow
+                  </span>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">${singerMonthList.name}</h5>
+                  <p class="card-text">${singerMonthList.description}</p>
+                </div>
+              </div>
+            </div>
+            `
+        })
+        singerMonth.innerHTML = mSinger.join('')
+
+        const musicMonth = this.songMonthLists.map(songMonthList => {
+            return `
+            <div class="playlist-rcm playlist-month">
+                      <div id="songId" class="song song-rcm-list" data-dom="song-item" data-song="${songMonthList.path}">
+                        <div class="thumb" style="background-image: url('${songMonthList.image}') ;">
+                        </div>
+
+                        <div class="body body-rcm ">
+                          <h3 class="title">${songMonthList.name}</h3>
+                          <p class="author">${songMonthList.singer}</p>
+                        </div>
+
+                        <div class="add-song">
+                          <p class="song-link"><a class="link" href="">${songMonthList.link}</a></p>
+                          <button class="btn-small">Thêm</button>
+                        </div>
+                      </div>
+                    </div>
+            `
+        })
+        playlistMonth.innerHTML = musicMonth.join('')
     },
 
 

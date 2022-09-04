@@ -249,6 +249,7 @@ a.navbar-brand {
 }
 
 .search-icon {
+    color: white;
     position: absolute;
     padding: 0 10px;
 }
@@ -323,8 +324,26 @@ a.navbar-brand {
     box-shadow: 0 8px 24px rgb(0 0 0 / 50%);
 }
 
-.your__singer-img {
+.your__singer-img,
+.head-banner-profile {
     border-radius: 50%;
+}
+
+.head-banner-content {
+    padding: 40px 0 0 0;
+}
+
+.profile-title {
+    text-align: left;
+}
+
+.profile-description {
+    color: var(--font-disabled);
+    font-weight: 500;
+}
+
+div#profile {
+    background: linear-gradient(359deg, rgb(0 0 0) 11.2%, rgb(63 63 63) 78.9%);
 }
 
 .card-body {
@@ -644,7 +663,8 @@ button:hover {
 /* Create Playlist */
 
 div#create-playlist {
-    background: linear-gradient(359deg, rgba(0, 0, 0, 0.93) 11.2%, rgb(63, 61, 61) 78.9%);
+    width: 100%;
+    background: linear-gradient(359deg, rgb(0 0 0) 11.2%, rgb(38 35 35 / 84%) 78.9%);
     height: 100%;
     position: absolute;
     margin: 30px 0;
@@ -722,6 +742,8 @@ p.search-option {
 }
 
 .tab-item {
+    font-weight: 600;
+    font-size: 14px;
     padding: 10px;
 }
 

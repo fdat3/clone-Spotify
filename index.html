@@ -64,7 +64,7 @@
         </ul>
 
         <ul class="list-group">
-          <a class="home link" href="#addPlaylist">
+          <a class="home link" href="#add">
             <li id="addIcon" class="list-group-item" aria-current="true">
               <span class="material-symbols-outlined">add</span>
               Tạo playlist
@@ -181,7 +181,7 @@
                         arrow_outward
                       </span>
                     </a></li>
-                  <li><a class="dropdown-item" href="">Hồ sơ</a></li>
+                  <li id="profile-nav"><a class="dropdown-item" href="#">Hồ sơ</a></li>
                   <li><a class="dropdown-item center direction" href="">Nâng cấp lên Premium
                       <span class="material-symbols-outlined">
                         arrow_outward
@@ -508,6 +508,7 @@
             </div>
 
           </div>
+          <hr>
         </div>
 
         <div class="tab-pane y-podcast">
@@ -517,30 +518,36 @@
                 <h1 class="body-banner-title">Theo dõi podcast đầu tiên của bạn</h1>
                 <span class="body-banner-description">Theo dõi podcast bạn yêu thích bằng cách nhấn vào nút theo
                   dõi.</span>
-                <a href="" id="search" class="btn-large body-banner-link"><span>TÌM PODCAST</span></a>
+                <a href="#search" id="search" class="btn-large body-banner-link"><span>TÌM PODCAST</span></a>
               </div>
             </div>
           </div>
-          <div class="row podcast">
-            <div class="your__playlist-wrap col-lg-2">
-              <div class="card your__playlist-card">
-                <img class="your__playlist-img" src="" class="card-img-top" alt="">
-                <div class="play-btn play-btn-lg play-btn-main">
-                  <span class="material-symbols-outlined play-icon">
-                    play_arrow
-                  </span>
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title"></h5>
-                  <p class="card-text"></p>
-                </div>
-              </div>
+          <div class="your__podcast">
+            <div class="welcome flex-block">
+              <h2><a href="">Đề xuất</a></h2>
+              <a href="" class="see__all">Xem tất cả</a>
             </div>
-          </div>
 
+            <div class="row y-podcastrcm">
+              <div class="your__playlist-wrap col-lg-2">
+                <div class="card your__playlist-card">
+                  <img class="your__playlist-img" src="" class="card-img-top" alt="">
+                  <div class="play-btn play-btn-lg play-btn-main">
+                    <span class="material-symbols-outlined play-icon">
+                      play_arrow
+                    </span>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title"></h5>
+                    <p class="card-text"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="tab-pane y-artist">
+        <div class="tab-pane y-singer">
           <div class="body-banner text-center ">
             <div class="body-banner-content">
               <div class="body-banner-text">
@@ -551,18 +558,26 @@
               </div>
             </div>
           </div>
-          <div class="row podcast">
-            <div class="your__playlist-wrap col-lg-2">
-              <div class="card your__playlist-card">
-                <img class="your__playlist-img" src="" class="card-img-top" alt="">
-                <div class="play-btn play-btn-lg play-btn-main">
-                  <span class="material-symbols-outlined play-icon">
-                    play_arrow
-                  </span>
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title"></h5>
-                  <p class="card-text"></p>
+
+          <div class="your__singer">
+            <div class="welcome flex-block">
+              <h2><a href="">Nghệ sĩ của bạn</a></h2>
+              <a href="" class="see__all">Xem tất cả</a>
+            </div>
+
+            <div class="row y-singerrcm">
+              <div class="your__playlist-wrap col-lg-2">
+                <div class="card your__playlist-card">
+                  <img class="your__playlist-img your__singer-img" src="" class="card-img-top" alt="">
+                  <div class="play-btn play-btn-lg play-btn-main">
+                    <span class="material-symbols-outlined play-icon">
+                      play_arrow
+                    </span>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title"></h5>
+                    <p class="card-text"></p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -582,29 +597,32 @@
               </div>
             </div>
           </div>
-          <div class="row podcast">
-            <div class="your__playlist-wrap col-lg-2">
-              <div class="card your__playlist-card">
-                <img class="your__playlist-img" src="" class="card-img-top" alt="">
-                <div class="play-btn play-btn-lg play-btn-main">
-                  <span class="material-symbols-outlined play-icon">
-                    play_arrow
-                  </span>
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title"></h5>
-                  <p class="card-text"></p>
+
+          <div class="your__artist">
+            <div class="welcome flex-block">
+              <h2><a href="">Khám phá nhạc của KSHMR</a></h2>
+              <a href="" class="see__all">Xem tất cả</a>
+            </div>
+
+            <div class="row y-artistrcm">
+              <div class="your__playlist-wrap col-lg-2">
+                <div class="card your__playlist-card">
+                  <img class="your__playlist-img" src="" class="card-img-top" alt="">
+                  <div class="play-btn play-btn-lg play-btn-main">
+                    <span class="material-symbols-outlined play-icon">
+                      play_arrow
+                    </span>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title"></h5>
+                    <p class="card-text"></p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-
         </div>
-        <hr>
       </div>
-
-
-
 
       <!-- Banner -->
 
@@ -636,81 +654,78 @@
           </div>
         </div>
       </div>
-    </div>
-  </div>
 
-  <!-- Create Playlist -->
-  <div id="create-playlist" class="create-playlist col-lg-10 hidden tab">
-    <div class="head-banner">
-      <div class="head-banner-content">
-        <div class="head-banner-info">
-          <span class="material-symbols-outlined music_note-icon">
-            music_note
-          </span>
-          <div class="head-banner-text">
-            <h2 class="head-banner-description">PLAYLIST</h2>
-            <h1 class="head-banner-title">Tạo danh sách yêu thích của bạn</h1>
-            <div class="header-banner-profile">
-              <a class="head-banner-profile-link" href="">frenki3</a>
+      <!-- Create Playlist -->
+      <div id="create-playlist" class="create-playlist hidden tab">
+        <div class="head-banner">
+          <div class="head-banner-content">
+            <div class="head-banner-info">
+              <span class="material-symbols-outlined music_note-icon">
+                music_note
+              </span>
+              <div class="head-banner-text">
+                <h2 class="head-banner-description">PLAYLIST</h2>
+                <h1 class="head-banner-title">Tạo danh sách yêu thích của bạn</h1>
+                <div class="header-banner-profile">
+                  <a class="head-banner-profile-link" href="">frenki3</a>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="option">
-        <i class="fas fa-ellipsis-h"></i>
-      </div>
-      <hr>
+          <div class="option">
+            <i class="fas fa-ellipsis-h"></i>
+          </div>
+          <hr>
 
-      <div class="body-banner text-center">
-        <div class="body-banner-content">
-          <div class="body-banner-text text-playlist">
-            <div id="playlist-search" class="play-list-search">
-              <div class="play-list-control">
-                <h1 class="body-banner-title title-playlist">Hãy cùng tìm nội dung cho danh sách phát của bạn</h1>
-                <span id="close-icon" class="material-symbols-outlined close-icon">
-                  close
-                </span>
-              </div>
-              <div class="input">
-                <div class="logo">
-                  <span class="material-symbols-outlined search-icon">
-                    search
-                  </span>
-                </div>
-                <div class="input">
-                  <input type="text" class="playlist-find" placeholder="Tìm bài hát và tập podcast">
-                </div>
-              </div>
-            </div>
-
-            <div id="playlist-rcm" class="play-list-recommend hidden tab">
-              <div class="head-playlist-rcm">
-                <div class="title-playlist-rcm">
-                  <p class="search-option">Tìm thêm</p>
-                  <h1>Đề xuất</h1>
-                  <p>Dựa trên tiêu đề danh sách phát này</p>
+          <div class="body-banner text-center">
+            <div class="body-banner-content">
+              <div class="body-banner-text text-playlist">
+                <div id="playlist-search" class="play-list-search">
+                  <div class="play-list-control">
+                    <h1 class="body-banner-title title-playlist">Hãy cùng tìm nội dung cho danh sách phát của bạn</h1>
+                    <span id="close-icon" class="material-symbols-outlined close-icon">
+                      close
+                    </span>
+                  </div>
+                  <div class="input">
+                    <div class="logo">
+                      <span class="material-symbols-outlined search-icon">
+                        search
+                      </span>
+                    </div>
+                    <div class="input">
+                      <input type="text" class="playlist-find" placeholder="Tìm bài hát và tập podcast">
+                    </div>
+                  </div>
                 </div>
 
-                <div class="song-rcm">
-                  <div class="player-playlist">
-                    <!--Playlist-->
-                    <div class="playlist-rcm">
-                      <div id="songId" class="song song-rcm-list" data-dom="song-item" data-song="song-path">
-                        <div id="btn-search-play" class="btn">
-                          <i class="fas fa-play icon-play"></i>
-                        </div>
-                        <div class="thumb" style="background-image: url('') ;">
-                        </div>
+                <div id="playlist-rcm" class="play-list-recommend hidden tab">
+                  <div class="head-playlist-rcm">
+                    <div class="title-playlist-rcm">
+                      <p class="search-option">Tìm thêm</p>
+                      <h1>Đề xuất</h1>
+                      <p>Dựa trên tiêu đề danh sách phát này</p>
+                    </div>
 
-                        <div class="body body-rcm">
-                          <h3 class="title"></h3>
-                          <p class="author"></p>
-                        </div>
-                        <div class="add-song">
-                          <a class="link" href="">
-                            <p class="song-link"></p>
-                          </a>
-                          <button class="btn-small">Thêm</button>
+                    <div class="song-rcm">
+                      <div class="player-playlist">
+                        <!--Playlist-->
+                        <div class="playlist-rcm">
+                          <div id="songId" class="song song-rcm-list" data-dom="song-item" data-song="song-path">
+                            <div class="thumb" style="background-image: url('') ;">
+                            </div>
+
+                            <div class="body body-rcm">
+                              <h3 class="title"></h3>
+                              <p class="author"></p>
+                            </div>
+                            <div class="add-song">
+                              <a class="link" href="">
+                                <p class="song-link"></p>
+                              </a>
+                              <button class="btn-small">Thêm</button>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -720,12 +735,165 @@
             </div>
           </div>
         </div>
+
+
       </div>
+
+      <!-- Profile -->
+
+      <div id="profile" class="profile hidden">
+        <div class="head-banner">
+          <div class="head-banner-content">
+            <div class="head-banner-info">
+              <img class="head-banner-img head-banner-profile col-lg-2" src="./assets/img/Banner/avatar.jpg" alt="">
+              <div class="head-banner-text">
+                <h2 class="head-banner-description">HỒ SƠ</h2>
+                <h1 class="head-banner-title title-profile">frenki3</h1>
+                <div class="header-banner-profile">
+                  <a class="head-banner-profile-link" href="">0 người theo dõi</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <div class="body-banner text-center">
+            <div class="body-banner-content">
+              <div class="body-banner-text text-playlist">
+                <div class="your__singer">
+                  <div class="welcome flex-block">
+                    <div class="profile-title">
+                      <h2 class="text-xs"><a class="profile-nav" href="">Nghệ sĩ hàng đầu của tháng</a></h2>
+                      <p class="profile-description">Chỉ hiển thị với bạn</p>
+                    </div>
+                    <a href="" class="see__all">Xem tất cả</a>
+                  </div>
+
+                  <div class="row singer-month">
+                    <div class="your__playlist-wrap col-lg-2">
+                      <div class="card your__playlist-card">
+                        <img class="your__playlist-img your__singer-img" src="" class="card-img-top" alt="">
+                        <div class="play-btn play-btn-lg play-btn-main">
+                          <span class="material-symbols-outlined play-icon">
+                            play_arrow
+                          </span>
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title"></h5>
+                          <p class="card-text"></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="playlist-rcm" class="play-list-recommend tab">
+                  <div class="head-playlist-rcm">
+                    <div class="welcome flex-block">
+                      <div class="profile-title">
+                        <h2 class="text-xs"><a class="profile-nav" href="">Bản nhạc hàng đầu tháng này</a></h2>
+                        <p class="profile-description">Chỉ hiển thị với bạn</p>
+                      </div>
+                      <a href="" class="see__all">Xem tất cả</a>
+                    </div>
+
+                    <div class="song-rcm">
+                      <div class="player-playlist">
+                        <!--Playlist-->
+                        <div class="playlist-rcm  playlist-month">
+                          <div id="songId" class="song song-rcm-list" data-dom="song-item" data-song="song-path">
+                            <div class="thumb" style="background-image: url('') ;">
+                            </div>
+
+                            <div class="body body-rcm">
+                              <h3 class="title"></h3>
+                              <p class="author"></p>
+                            </div>
+                            <div class="add-song">
+                              <a class="link" href="">
+                                <p class="song-link"></p>
+                              </a>
+                              <button class="btn-small">Thêm</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
-
-
   </div>
 
+
+  <!-- Play Music Page -->
+  <div id="banner__music" class="banner-music hidden">
+    <div class="head-banner-music">
+      <div class="head-banner-content-music col-lg-10">
+        <div class="head-banner-info">
+          <img class="head-banner-img col-lg-2" src="./assets/img/Banner/avatar.jpg" alt="">
+          <div class="head-banner-text">
+            <h2 class="head-banner-description">PLAYLIST CỘNG TÁC</h2>
+            <h1 class="head-banner-title">#1 Playlist của bạn</h1>
+            <div class="header-banner-profile">
+              <a class="head-banner-profile-link" href="">frenki3</a>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="option-banner">
+          <div class="play-btn-scroll play-btn-lg play-btn-main">
+            <div class="btn btn-toggle-scroll-play">
+              <i class="fas fa-play icon-play" aria-hidden="true"></i>
+              <i class="fas fa-pause icon-pause" aria-hidden="true"></i>
+            </div>
+          </div>
+          <div class="option">
+            <div class="dropdown">
+              <button class="btn btn-option dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <i class="fas fa-ellipsis-h"></i>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="player">
+        <!--Playlist-->
+        <div class="playlist col-lg-10">
+          <div id="songId" class="song" data-dom="song-item" data-song="">
+            <div class="btn btn-toggle-play">
+              <i class="fas fa-play icon-play"></i>
+            </div>
+
+            <div class="thumb" style="background-image: url('') ;">
+            </div>
+
+            <div class="body">
+              <h3 class="title"></h3>
+              <p class="author"></p>
+            </div>
+
+            <div class="btn btn-mic">
+              <span id="favorite-icon" class="material-symbols-outlined">
+                favorite
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
   <!--Dashboard-->
@@ -821,70 +989,7 @@
 
     <audio id="audio" src=""></audio>
   </div>
-  <!-- Play Music Page -->
-  <div id="banner__music" class="banner-music hidden">
-    <div class="head-banner-music">
-      <div class="head-banner-content-music col-lg-10">
-        <div class="head-banner-info">
-          <img class="head-banner-img col-lg-2" src="./assets/img/Banner/avatar.jpg" alt="">
-          <div class="head-banner-text">
-            <h2 class="head-banner-description">PLAYLIST CỘNG TÁC</h2>
-            <h1 class="head-banner-title">#1 Playlist của bạn</h1>
-            <div class="header-banner-profile">
-              <a class="head-banner-profile-link" href="">frenki3</a>
-            </div>
-          </div>
-        </div>
-        <hr>
-        <div class="option-banner">
-          <div class="play-btn-scroll play-btn-lg play-btn-main">
-            <div class="btn btn-toggle-scroll-play">
-              <i class="fas fa-play icon-play" aria-hidden="true"></i>
-              <i class="fas fa-pause icon-pause" aria-hidden="true"></i>
-            </div>
-          </div>
-          <div class="option">
-            <div class="dropdown">
-              <button class="btn btn-option dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                <i class="fas fa-ellipsis-h"></i>
-              </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
 
-        <div class="player">
-          <!--Playlist-->
-          <div class="playlist col-lg-10">
-            <div id="songId" class="song" data-dom="song-item" data-song="">
-              <div class="btn btn-toggle-play">
-                <i class="fas fa-play icon-play"></i>
-              </div>
-
-              <div class="thumb" style="background-image: url('') ;">
-              </div>
-
-              <div class="body">
-                <h3 class="title"></h3>
-                <p class="author"></p>
-              </div>
-
-              <div class="btn btn-mic">
-                <span id="favorite-icon" class="material-symbols-outlined">
-                  favorite
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 </body>
 
 <script src="https://kit.fontawesome.com/491fa68464.js" crossorigin="anonymous"></script>

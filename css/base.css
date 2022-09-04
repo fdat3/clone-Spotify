@@ -10,8 +10,13 @@
 }
 
 .link {
+    color: gainsboro;
     font-weight: 600;
     text-decoration: none;
+}
+
+a>.link:hover {
+    text-decoration: underline;
 }
 
 hr {
@@ -221,11 +226,17 @@ div#banner-fav {
 }
 
 input[type="text"] {
+    color: white;
     text-align: center;
     padding: 10px;
     border-radius: 25px;
     border: none;
     width: 300px;
+}
+
+input::placeholder {
+    color: white;
+    font-weight: 400;
 }
 
 .text-playlist {
@@ -237,7 +248,7 @@ input[type="text"] {
 }
 
 .playlist-find {
-    background-color: black !important;
+    background-color: hsla(0, 0%, 100%, .1) !important;
     border-radius: 5px !important;
 }
 
@@ -255,4 +266,18 @@ input[type="text"] {
     background-color: var(--font-disabled);
     border-radius: 5px;
     color: white;
+}
+
+.text-xs {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+a.profile-nav {
+    text-decoration: none;
+    color: white;
+}
+
+a.profile-nav:hover {
+    text-decoration: underline;
 }
