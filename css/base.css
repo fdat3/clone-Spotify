@@ -12,7 +12,6 @@
 .link {
     font-weight: 600;
     text-decoration: none;
-    color: aquamarine;
 }
 
 hr {
@@ -243,4 +242,10 @@ input[type="text"] {
 .close-icon:hover,
 .search-option:hover {
     cursor: pointer;
+}
+
+.select {
+    background-color: var(--font-disabled);
+    border-radius: 5px;
+    color: white;
 }

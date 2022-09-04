@@ -707,3 +707,20 @@ p.search-option {
 .song-rcm-list {
     box-shadow: none;
 }
+
+.link .song-link {
+    color: var(--font-color);
+}
+
+.link:hover .song-link {
+    text-decoration: underline;
+}
+
+.tabs {
+    display: flex;
+    color: white;
+}
+
+.tab-item {
+    padding: 10px;
+}

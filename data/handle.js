@@ -31,7 +31,7 @@ closeIcon.onclick = function () {
 search = document.getElementById('search-input')
 
 // Change Layout
-tabs = document.getElementById("search__page")
+searchPage = document.getElementById("search__page")
 mainIcon = document.getElementById("home__layout")
 mainTabs = document.getElementById("main__page")
 tabsIcon = document.getElementById("search__layout")
@@ -45,6 +45,7 @@ musicLayout = document.getElementById('banner__music')
 navTheme = document.getElementById('navbar')
 playBtnScroll = document.getElementById('btn-scroll')
 searchBtn = document.getElementById('search')
+tabsLib = document.getElementById('tabs')
 
 
 // Create Playlist 
@@ -52,7 +53,6 @@ searchBtn = document.getElementById('search')
 addPlaylist = document.getElementById('addIcon')
 addPlaylistBanner = document.getElementById('create-playlist')
 
-console.log(addPlaylist)
 
 function addBanner() {
     addPlaylist.classList.add('active')
@@ -63,7 +63,7 @@ function addBanner() {
     libsIcon.classList.remove('active')
     tabsIcon.classList.remove('active')
     bannerIcon.classList.add('active')
-    tabs.classList.add("hidden")
+    searchPage.classList.add("hidden")
     mainTabs.classList.add("hidden")
     libTabs.classList.add('hidden')
     favTabs.classList.add('hidden')
@@ -103,7 +103,7 @@ function changeLayout() {
     favIcon.classList.remove('active')
     mainIcon.classList.remove('active')
     tabsIcon.classList.add("active")
-    tabs.classList.remove("hidden")
+    searchPage.classList.remove("hidden")
     mainTabs.classList.add("hidden")
     mainLayout.classList.remove('fav-theme')
     musicLayout.classList.add('hidden')
@@ -119,8 +119,9 @@ function libLayout() {
     mainIcon.classList.remove('active')
     tabsIcon.classList.remove("active")
     mainTabs.classList.add("hidden")
-    tabs.classList.add("hidden")
+    searchPage.classList.add("hidden")
     libTabs.classList.remove('hidden')
+    tabsLib.classList.remove('hidden')
     mainLayout.classList.remove('fav-theme')
     musicLayout.classList.add('hidden')
     search.classList.add('hidden')
@@ -130,7 +131,7 @@ function libLayout() {
 // favorite layout 
 
 function favLayout() {
-    tabs.classList.add("hidden")
+    searchPage.classList.add("hidden")
     favIcon.classList.add('active')
     mainIcon.classList.remove('active')
     libsIcon.classList.remove('active')
@@ -146,6 +147,8 @@ function favLayout() {
     bannerIcon.classList.remove('active')
     addPlaylist.classList.remove('active')
     addPlaylistBanner.classList.add('hidden')
+    tabsLib.classList.add('hidden')
+
     preventDefault()
 }
 
@@ -156,13 +159,15 @@ function bannerLayout(e) {
     libsIcon.classList.remove('active')
     tabsIcon.classList.remove('active')
     bannerIcon.classList.add('active')
-    tabs.classList.add("hidden")
+    searchPage.classList.add("hidden")
     mainTabs.classList.add("hidden")
     libTabs.classList.add('hidden')
     favTabs.classList.add('hidden')
     search.classList.add('hidden')
     addPlaylist.classList.remove('active')
     addPlaylistBanner.classList.add('hidden')
+    tabsLib.classList.add('hidden')
+
     e.preventDefault();
 
     document.onscroll = function () {
@@ -178,11 +183,15 @@ function bannerLayout(e) {
 // Click Search 
 
 searchBtn.onclick = function (e) {
-    tabs.classList.remove("hidden")
+    searchPage.classList.remove("hidden")
     navTheme.classList.remove('fav-theme')
     favTabs.classList.add('hidden')
     tabsIcon.classList.add('active')
     favIcon.classList.remove('active')
+    tabsLib.classList.add('hidden')
+
     e.preventDefault();
 }
 
+
+// Change Tab

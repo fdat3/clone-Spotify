@@ -32,6 +32,13 @@ const trending = $('.trending')
 const singer = $('.singer')
 const playlistSearch = $('.playlist-rcm')
 
+const tabs = $$(".tab-item");
+const panes = $$(".tab-pane");
+
+const tabSelect = $(".tab-item.select");
+const line = $(".tabs .line");
+
+
 const app = {
     currentIndex: 0, // lay bai hat dau tien
     isPlaying: false,
@@ -1196,10 +1203,20 @@ const app = {
             }
         }
 
-        //Click Song
-        // playlist.onclick = function (e) {
-        //     audio.play();
-        // }
+        tabs.forEach((tab, index) => {
+            const pane = panes[index];
+
+            tab.onclick = function () {
+                $(".tab-item.active").classList.remove("active");
+                $(".tab-pane.active").classList.remove("active");
+
+                line.style.left = this.offsetLeft + "px";
+                line.style.width = this.offsetWidth + "px";
+
+                tab.classList.add("active");
+                pane.classList.add("active");
+            };
+        });
     },
 
     loadCurrentSong: function () {

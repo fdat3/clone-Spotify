@@ -16,7 +16,6 @@
   <link rel="stylesheet" href="./css/main.css">
   <link rel="stylesheet" href="./css/base.css">
   <link rel="stylesheet" href="./css/responsive.css">
-  <link rel="stylesheet" href="./font/stylesheet.css">
 
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -150,6 +149,21 @@
             </div>
 
 
+          </div>
+          <div id="tabs" class="tabs hidden">
+            <div id="tab-item" class="tab-item select">
+              Playlist
+            </div>
+            <div id="tab-item" class="tab-item">
+              Podcast
+            </div>
+            <div id="tab-item" class="tab-item">
+              Nghệ sĩ
+            </div>
+            <div id="tab-item" class="tab-item">
+              Albums
+            </div>
+            <div class="line"></div>
           </div>
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
@@ -453,7 +467,7 @@
 
       <div id="lib__page" class="lib__page hidden tab">
         <!-- Playlist -->
-        <div id="y-playlist" class="y-playlist">
+        <div id="y-playlist" class="tab-content y-playlist">
           <div class="fav-playlist col-lg-12">
             <div class="fav-list">
               <div class="fav-card card">
@@ -494,6 +508,97 @@
             </div>
 
           </div>
+        </div>
+
+        <div class="tab-content y-podcast hidden">
+          <div class="body-banner text-center ">
+            <div class="body-banner-content">
+              <div class="body-banner-text">
+                <h1 class="body-banner-title">Theo dõi podcast đầu tiên của bạn</h1>
+                <span class="body-banner-description">Theo dõi podcast bạn yêu thích bằng cách nhấn vào nút theo
+                  dõi.</span>
+                <a href="" id="search" class="btn-large body-banner-link"><span>TÌM PODCAST</span></a>
+              </div>
+            </div>
+          </div>
+          <div class="row podcast">
+            <div class="your__playlist-wrap col-lg-2">
+              <div class="card your__playlist-card">
+                <img class="your__playlist-img" src="" class="card-img-top" alt="">
+                <div class="play-btn play-btn-lg play-btn-main">
+                  <span class="material-symbols-outlined play-icon">
+                    play_arrow
+                  </span>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title"></h5>
+                  <p class="card-text"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="tab-content y-artist hidden">
+          <div class="body-banner text-center ">
+            <div class="body-banner-content">
+              <div class="body-banner-text">
+                <h1 class="body-banner-title">Theo dõi nghệ sĩ đầu tiên của bạn</h1>
+                <span class="body-banner-description">Theo dõi nghệ sĩ bạn yêu thích bằng cách nhấn vào nút theo dõi.
+                </span>
+                <a href="" id="search" class="btn-large body-banner-link"><span>TÌM NGHỆ SĨ</span></a>
+              </div>
+            </div>
+          </div>
+          <div class="row podcast">
+            <div class="your__playlist-wrap col-lg-2">
+              <div class="card your__playlist-card">
+                <img class="your__playlist-img" src="" class="card-img-top" alt="">
+                <div class="play-btn play-btn-lg play-btn-main">
+                  <span class="material-symbols-outlined play-icon">
+                    play_arrow
+                  </span>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title"></h5>
+                  <p class="card-text"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="tab-content y-albums hidden">
+          <div class="body-banner text-center ">
+            <div class="body-banner-content">
+              <div class="body-banner-text">
+                <h1 class="body-banner-title">Theo dõi album đầu tiên của bạn
+                </h1>
+                <span class="body-banner-description">Lưu album bằng cách nhấn vào biểu tượng trái tim.
+                </span>
+                <a href="" id="search" class="btn-large body-banner-link"><span>TÌM ALBUMS</span></a>
+              </div>
+            </div>
+          </div>
+          <div class="row podcast">
+            <div class="your__playlist-wrap col-lg-2">
+              <div class="card your__playlist-card">
+                <img class="your__playlist-img" src="" class="card-img-top" alt="">
+                <div class="play-btn play-btn-lg play-btn-main">
+                  <span class="material-symbols-outlined play-icon">
+                    play_arrow
+                  </span>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title"></h5>
+                  <p class="card-text"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
         <hr>
       </div>
@@ -602,7 +707,9 @@
                           <p class="author"></p>
                         </div>
                         <div class="add-song">
-                          <p class="song-link"><a class="link" href=""></a></p>
+                          <a class="link" href="">
+                            <p class="song-link"></p>
+                          </a>
                           <button class="btn-small">Thêm</button>
                         </div>
                       </div>
