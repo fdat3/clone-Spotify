@@ -724,3 +724,7 @@ p.search-option {
 .tab-item {
     padding: 10px;
 }
+
+.tab-pane {
+    display: none;
+}

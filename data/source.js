@@ -36,7 +36,6 @@ const tabs = $$(".tab-item");
 const panes = $$(".tab-pane");
 
 const tabSelect = $(".tab-item.select");
-const line = $(".tabs .line");
 
 
 const app = {
@@ -1207,14 +1206,11 @@ const app = {
             const pane = panes[index];
 
             tab.onclick = function () {
-                $(".tab-item.active").classList.remove("active");
-                $(".tab-pane.active").classList.remove("active");
+                $(".tab-item.select").classList.remove("select");
+                $(".tab-pane.hidden").classList.remove("hidden");
 
-                line.style.left = this.offsetLeft + "px";
-                line.style.width = this.offsetWidth + "px";
-
-                tab.classList.add("active");
-                pane.classList.add("active");
+                tab.classList.add("select");
+                pane.classList.add("hidden");
             };
         });
     },
