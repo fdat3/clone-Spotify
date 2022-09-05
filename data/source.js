@@ -881,7 +881,7 @@ const app = {
             singer: 'Phan Mạnh Quỳnh',
             path: '.assets/music/Khi Người Mình Yêu Khóc live.mp3',
             image: './assets/img/Singers/PhanManhQuynh',
-            link: 'Nàng Thơ'
+            link: 'Khi người mình yêu khóc'
         },
     ],
 

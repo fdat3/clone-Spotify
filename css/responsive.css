@@ -114,11 +114,11 @@
 @media (min-width: 739px) and (max-width: 1023px) {
 
     nav.navbar.navbar-expand-lg.bg-light {
-        width: 73%;
+        width: 83.3333%;
     }
 
     .content__left {
-        width: 27%;
+        width: 26.77777%;
     }
 
     .content__right {
