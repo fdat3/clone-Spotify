@@ -1389,10 +1389,6 @@ const app = {
             }
         }
 
-        song.onclick = function () {
-            audio.play();
-        }
-
         //When playing
         audio.onplay = function () {
             _this.isPlaying = true
