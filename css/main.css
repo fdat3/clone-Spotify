@@ -342,9 +342,7 @@ a.navbar-brand {
     font-weight: 500;
 }
 
-div#profile {
-    background: linear-gradient(359deg, rgb(0 0 0) 11.2%, rgb(63 63 63) 78.9%);
-}
+
 
 .card-body {
     min-height: 100px;
