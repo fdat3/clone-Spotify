@@ -96,8 +96,9 @@ li.list-group-item {
 }
 
 .navbar-expand-lg .navbar-nav .dropdown-menu {
+    background-color: #333;
     width: 230px;
-    margin: 10px -110px;
+    margin: 10px -190px;
 }
 
 /* Main page */
