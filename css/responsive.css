@@ -127,7 +127,7 @@
     }
 
     .track__wrap {
-        min-width: 250px;
+        min-width: 340px;
     }
 
     .track__title {
@@ -149,7 +149,7 @@
 
     .play-btn-main {
         bottom: 90px;
-        left: 50px;
+        left: 115px;
     }
 
     .welcome>h2>a {
@@ -236,7 +236,7 @@
     }
 
     nav#navbar {
-        width: 83.3333%;
+        width: 100%;
         position: fixed;
     }
 
